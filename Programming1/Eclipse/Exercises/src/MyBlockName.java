@@ -34,8 +34,36 @@ public class MyBlockName {
 		System.out.print("P   P");
 		System.out.print(" ");
 		System.out.println("H   H");
-		
 
+		System.out.print(" SSS ");
+		System.out.print(" ");
+		System.out.print("  T  ");
+		System.out.print(" ");
+		System.out.print("EEE  ");
+		System.out.print(" ");
+		System.out.print("PPPP ");
+		System.out.print(" ");
+		System.out.println("HHHHH");
+
+		System.out.print("    S");
+		System.out.print(" ");
+		System.out.print("  T  ");
+		System.out.print(" ");
+		System.out.print("E    ");
+		System.out.print(" ");
+		System.out.print("P    ");
+		System.out.print(" ");
+		System.out.println("H   H");
+		
+		System.out.print(" SSS ");
+		System.out.print(" ");
+		System.out.print("  T  ");
+		System.out.print(" ");
+		System.out.print("EEEEE");
+		System.out.print(" ");
+		System.out.print("P    ");
+		System.out.print(" ");
+		System.out.println("H   H");
 	}
 
 }
