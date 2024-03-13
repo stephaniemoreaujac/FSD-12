@@ -172,6 +172,7 @@ public class Day2 {
 		
 //		k = "3"; // ERROR
 		k = Integer.parseInt( "3" ); // string into int
+//		k = Integer.parseInt("3.2"); // ERROR -> incorrect data value provided
 		System.out.println( k );
 		l = Double.parseDouble("3.1459" );	// string into double
 		System.out.println( l );
@@ -179,6 +180,17 @@ public class Day2 {
 		
 		System.out.println( Math.PI ); // math class PI constant
 
+		
+		
+		// COMPLETED ON DAY 3
+		
+		final int BIRTH_YEAR = 1983; // READ ONLY value
+		
+		System.out.println(BIRTH_YEAR);
+		
+		int myYearOfBirth = BIRTH_YEAR + 10;
+		myYearOfBirth++;
+		System.out.println(myYearOfBirth);
 	}
 
 
