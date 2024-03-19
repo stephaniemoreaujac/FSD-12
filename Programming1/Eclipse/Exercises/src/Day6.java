@@ -89,5 +89,16 @@ public class Day6 {
 		}
 		System.out.println("Foor loop is done");
 
+		/* -- Actually reviewed on day 7 -- */
+		// multiplication table - nested loops
+		
+		final int MAX_ROWS = 8;
+		final int MAX_COLS = 10;
+		for (int row = 1; row<= MAX_ROWS; row++) {
+			for (int col = 1; col<=MAX_COLS; col++) {
+				System.out.print( (row * col) + "\t" );
+			}
+			System.out.println();
+		}
 	}
 }
