@@ -1,5 +1,5 @@
 
-public class Day5 {
+public class Day6 {
 
 	public static void main(String[] args) {
 		
@@ -88,8 +88,6 @@ public class Day5 {
 			
 		}
 		System.out.println("Foor loop is done");
-		
 
 	}
-
 }
