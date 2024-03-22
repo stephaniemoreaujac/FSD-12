@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Day8 {
 
 	public static void main(String[] args) {
-	/*	
+	
 		// declare and initialize in one line
 		String[] days = {"Sunday", "Monday", "Tuesday", "Wednesday","Thursday", "Friday", "Saturday" };
 		
@@ -90,7 +90,7 @@ public class Day8 {
 		for (double g : gradeLoop) {
 			System.out.println("Grade is: " + g);
 		}
-		*/
+		
 		
 		// array return from method
 		int[] dataReturned = arrayReturns();
@@ -104,8 +104,23 @@ public class Day8 {
 		arrayVariableArguments(5, 45, 15, 64, 20);
 	}
 	
-//	public static void arrayVariableArguments(int newInt, int ... arguments) {
+	/**
+	 * Example for argument of a variable length of ints with additional arguments
+	 * @param newInt dummy data
+	 * @param arguments dummy data
+	 */
+	public static void arrayVariableArguments(int newInt, int ... arguments) {
+		System.out.println("Single value int: " + newInt);
+		for (int x : arguments) {
+			System.out.print(x + ":" + arguments[x] + " -- ");
+		}
+		System.out.println();
+	}
 	
+	/**
+	 * Example for argument of a variable legnth array of ints
+	 * @param argument dummy data
+	 */
 	public static void arrayVariableArguments(int ... arguments) {
 //		for (int x : arguments) {
 		for (int x = 0; x < arguments.length; x++) {
@@ -113,6 +128,10 @@ public class Day8 {
 		}
 		System.out.println();
 	}
+	/**
+	 * Example for argument of array of ints
+	 * @param arguments dummy data
+	 */
 	public static void arrayArguments(int[] arguments) {
 //		for (int x : arguments) {
 		for (int x = 0; x < arguments.length; x++) {
@@ -120,22 +139,38 @@ public class Day8 {
 		}
 		System.out.println();
 	}
+	
+	/**
+	 * Example for argument of a single int
+	 * @param argument dummy data
+	 */
 	public static void intArguments(int argument) {
 		System.out.println(argument);
 	}
 	
-	
+	/**
+	 * Example for returning a single int
+	 * @return dummy data
+	 */
 	public static int intReturns() {
 		int i = 9;
 		return i;
 	}
+
+	/**
+	 * Example for returning array of ints
+	 * @return dummy data
+	 */
 	public static int[] arrayReturns() {
 		int[] data = {1, 5, 10};
 		
 		return data;
 	}
 	
-	
+	/**
+	 * Practice exercise: create array with 20 random ints and
+	 * calculate different values therein
+	 */
 	public static void arrayPractice1() {
 
 		// create array with 20 elements
@@ -180,6 +215,10 @@ public class Day8 {
 		
 	}
 	
+	/**
+	 * Practice exercise Advanced: create array with 20 random ints and
+	 * calculate different values therein using array for total counts
+	 */
 	public static void arrayPratice1_advanced() {
 
 		// create array with 20 elements
@@ -224,6 +263,7 @@ public class Day8 {
 		
 		
 	}
+
 	/**
 	 * Returns a random number between a given maximum and minimum
 	 * @param max maximum value of random number
