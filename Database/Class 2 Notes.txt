@@ -1,0 +1,30 @@
+( ) the data
+{ } repetitive data
+* Primary Key
+
+
+UNNORMALIZED
+Order = (*order_number, order_date, customer_id, customer_name, customer_address, {product_number, product_description, product_price, qty_ordered})
+
+
+1NF
+Order = (*order_number, order_date, customer_id, customer_name, customer_address, *product_number, product_description, product_price, qty_ordered)
+
+
+2NF
+Order = (*order_number, order_date, customer_id, customer_name, customer_address)
+
+Products = (*product_number, product_description, product_price)
+
+Order_line = (*order_number, *product_number, qty_ordered)
+
+
+
+3NF
+Order = (*order_number, order_date, customer_id)
+
+Customer = (*customer_id, customer_name, customer_address)
+
+Products = (*product_number, product_description, product_price)
+
+Order_line = (*order_number, *product_number, qty_ordered)
