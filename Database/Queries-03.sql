@@ -88,4 +88,15 @@ SELECT 'hello wolrd' AS Hi, (10*5) AS mathStuff;
 
 SELECT amount, amount/100 AS discount, 'CAD' AS currency FROM payments;
 
+-- DONE ON DAY 4
 
+-- DISTINCT - fetch unique values
+SELECT DISTINCT(`status`) FROM orders; -- backtick ` allow to identify entities
+
+SELECT COUNT( DISTINCT(`status`) ) AS NumStatus FROM orders; -- count the number of unique statuses
+
+-- ORDER BY - default ASC
+SELECT firstName, lastName, jobTitle FROM employees ORDER BY lastName DESC;
+SELECT firstName, lastName, jobTitle FROM employees ORDER BY lastName ASC, firstName DESC;
+
+SELECT firstName, lastName, jobTitle FROM employees WHERE jobTitle = 'Sales Rep' ORDER BY firstName;
