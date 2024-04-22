@@ -194,18 +194,19 @@ ALTER TABLE students
 /*
 -- be careful with constraints 
 	-- creating and dropping tables with contraints can cause errors if not done in the correct order
-
+DROP TABLE aaa; 
+DROP TABLE bbb; 
 CREATE TABLE bbb (
-	my_id INT PRIMARY KEY AUTO_INCREMENT,
-    my_other INT
+	my_bbb_id INT PRIMARY KEY AUTO_INCREMENT,
+    my_bbb_col INT
 );
 
 
 CREATE TABLE aaa (
-	my_id INT PRIMARY KEY AUTO_INCREMENT,
-    my_other INT,
+	my_aaa_id INT PRIMARY KEY AUTO_INCREMENT,
+    my_aaa_col INT,
     
-    FOREIGN KEY (my_other) REFERENCES bbb(my_id)
+   FOREIGN KEY (my_aaa_col) REFERENCES bbb(my_bbb_id)
 );
 -- if i try to do this before CREATE TABLE bbb = ERROR unknown reference
 
@@ -221,4 +222,9 @@ DROP TABLE bbb;
 -- if i try to drop bbb before aaa
 	-- Error Code: 3730. Cannot drop table 'bbb' referenced by a foreign key constraint 'aaa_ibfk_1' on table 'aaa'.
 
+INSERT INTO bbb VALUES (111,999), (222,888), (333,777), (444,666);
+INSERT INTO aaa (my_aaa_col) VALUES (111), (222), (333), (444);
 */
+SELECT * FROM aaa;
+SELECT * FROM bbb;
+
