@@ -136,9 +136,11 @@ SELECT * FROM offices WHERE LENGTH(state) = 2;
 SELECT
 	CONCAT(e1.firstName, ' ', e1.lastName) AS employee,
     CONCAT(e2.firstName, ' ', e2.lastName) AS boss,
-    COALESCE(e2.extension, e1.reportsTo, 'Contact Me')  AS bossContact
+    COALESCE(e2.extension, e1.firstName, 'Contact Me')  AS bossContact
 FROM employees AS e1
 LEFT JOIN employees AS e2 ON e1.reportsTo = e2.employeeNumber;
+
+
 
 
 
