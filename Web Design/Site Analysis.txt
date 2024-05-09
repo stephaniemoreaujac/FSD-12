@@ -46,10 +46,13 @@ FUTURE CONSIDERATIONS:
 
 
 WIREFRAMES
+Homepage
 Desktop: https://wireframe.cc/fNhLWi
 Mobile: https://wireframe.cc/52c1zF
 
-
+Destinations
+Desktop: https://wireframe.cc/oyhK4M
+Mobile: https://wireframe.cc/TTApC7
 
 
 
