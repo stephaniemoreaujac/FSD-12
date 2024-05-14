@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Forms</title>
+    <meta charset="utf-8">  
+</head>
+<body> 
+
+    <h1>My first Form</h1>
+    <form action="http://jac.stephmoreau.ca/submitForm/" method="POST">
+        <h2>My info</h2>
+        <!-- anothe way of associating label and inputs -->
+        <label>Hello
+            <input type="text" name="greeting">
+        </label>
+        <br>
+        <label for="txtFirstName">First Name :</label>
+        <input type="text" name="firstName" id="txtFirstName"><br>
+        <label for="txtPassword">Password :</label>
+        <input type="password" name="password" value="shhhhh" id="txtPassword"> <br>
+        <label for="txtLastName">Last Name:</label> 
+        <input type="text" name="lastName" placeholder="your last name" id="txtLastName"><br>
+
+        <label for="txtEmail">Email address: </label>
+        <input type="email" name="email" id="txtEmail" required autocomplete="off" ><br>
+
+        <label for="txtUrl">URL: </label>
+        <input type="url" name="url" id="txtUrl"><br>
+        
+        <label for="txtNumber">Years: </label>
+        <input type="number" name="number" id="txtNumber" value="2024" disabled><br>
+
+        <label for="txtDate">Date</label>
+        <input type="date" name="date" id="txtDate"><br>
+        <label for="txtColor">Color</label>
+        <input type="color" name="color" id="txtColor"><br>
+        
+        ..<input type="hidden" name="shhh">..
+
+        <h3>Checkbox</h3>
+        <input type="checkbox" name="human" id="chkHuman" value="1" >
+        <label for="chkHuman">Are you Human?</label><br>
+        <input type="checkbox" name="cat" id="chkCat" value="NinjaCat!" checked>
+        <label for="chkCat">Are you a Ninja Cat? </label><br>
+        
+        <h3>Radio Button</h3>
+        What city do you live?<br>
+        <input type="radio" name="city" id="radCityMtl" value="mtl" checked>
+        <label for="radCityMtl">Montreal</label><br>
+        <input type="radio" name="city" id="radCityOtt" value="ott">
+        <label for="radCityOtt">Ottawa</label><br>
+        <input type="radio" name="city" id="radCityTor" value="tor">
+        <label for="radCityTor">Toronto</label><br>
+        <br>
+        Where were you born?<br>
+        <input type="radio" name="born" id="radBornCnd" value="cnd">
+        <label for="radBornCnd">Canada</label><br>
+        <input type="radio" name="born" id="radBornUsa" value="usa">
+        <label for="radBornUsa">USA</label><Br>
+
+
+        <br><br>
+        <input type="submit" name="inpSubmit" value="Click Me">
+        <input type="button" value="I do nothing (for now)">
+        <input type="reset" name="inpReset" value="Clear the form">
+    </form>
+    <hr>
+    <form action="http://jac.stephmoreau.ca/submitForm/" method="GET">
+
+        <label for="txtDescription">Describe Something</label><br>
+        <textarea name="desc" id="txtDescription">default value</textarea>
+
+        <br>
+        <label for="selCars">Pick a car</label>
+        <select name="cars" id="selCars">
+            <option label="--pick one--"></option>
+            <option value="sed">Sedan</option>
+            <option value="cou">Coupe</option>
+            <option value="suv">Sports Utility Vehicle</option>
+        </select><br>
+
+        <label for="selFruits">Favorite Fruits</label>
+        <select name="fruits[]" id="selFruits" size="5" multiple>
+            <option>Apple</option>
+            <option>Banane</option>
+            <option>Cherry</option>
+            <option>Orange</option>
+            <option>Grapes</option>
+            <option>Kiwi</option>
+            <option>Peach</option>
+        </select>
+        <br>
+
+        <label for="selMakeModel">Car Make and Model</label>
+        <select name="makeModel" id="selMakeModel">
+            <optgroup label="BMW">
+                <option>X1</option>
+                <option>X3</option>
+                <option>X5</option>
+            </optgroup>
+            <optgroup label="Volkswagon">
+                <option>Jetta</option>
+                <option>Golf</option>
+                <option selected>Atlas</option>
+            </optgroup>
+            <optgroup label="Honda">
+                <option>Civic</option>
+                <option>CRV</option>
+            </optgroup>
+
+        </select>
+        <br>
+        <button type="submit" name="btnSubmit"> <img src="images/ninjaCat.png" alt="ninja cat"></button>
+        <button type="button" name="btnButton">Still does nothing</button>
+        <button type="reset" name="btnReset">Reset Button</button>
+    </form>
+    <br><br><br><br><br><br><br><br>
+</body>
+</html>
