@@ -1,0 +1,132 @@
+/* HTML Element selector */
+*{
+    font-family:Arial, Helvetica, sans-serif;
+}
+html {
+    font-size: 16px;    
+}
+
+section {
+    font-size: 14px;
+}
+p {
+    font-size: .7rem;
+    color: rgb(105, 46, 14);
+}
+
+p, li {
+    line-height: 1em;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 900;
+    text-align:center;
+    letter-spacing: 5px;
+}
+
+/* Anchor Tags are Special - LoVe HAte */
+a:link{
+    color: orange;
+}
+a:visited{
+    color: crimson;
+}
+a:hover{
+    color: lime;
+}
+a:active{
+    color:purple;
+}
+
+/* CLASS Selector */
+.highlight{
+    background-color: pink;
+}
+.active {
+    font-weight: 900;
+}
+
+/* ID selectors */ 
+#special{
+    background-color: lightblue;
+}
+
+ul .highlight.active{
+    background-color: lime;
+}
+
+/* highlight class of LI elements only */
+li.highlight{
+    text-decoration:line-through;
+    background-color: blue;
+}       
+.active{
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* any anchor whose ancestor is nav */
+/* CHILD Selector */
+nav a{
+    text-decoration: none;
+}
+
+/* DIRECT CHILD Selector */
+main > footer{
+    color:green;
+}
+
+/* ADJACENT Selector */
+h2 + p{
+    font-size: 1.2em;
+}
+/* SIBLING Selector */
+h2 ~ p {
+    font-variant:small-caps;
+}
+
+input[type] {
+    border: 2px solid red;
+}
+
+nav li{
+    list-style-type:square;
+}
+
+footer{
+    width: 200px;
+    padding: 15px;
+    border: 20px solid rgba(55,55,55,.5);
+    margin: 20px 50px 10px;
+    background-color: violet;
+}
+
+/* DISPLAY */
+span{
+    display: block;
+}
+
+
+/* POSITIONS / FLOATS */
+body > footer{
+    position: relative;
+    margin:0;
+    left:250px;
+    top: -100px;
+}
+
+footer a{
+    position: absolute;
+    top:100px;
+}
+
+img{ 
+    height: 200px;
+    float: left;
+}
+
+p{
+    clear:both;
+} 
