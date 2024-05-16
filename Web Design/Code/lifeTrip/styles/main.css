@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Sigmar+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Work Sans", Arial, Helvetica, sans-serif;
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: "Sigmar One", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-variant: small-caps;
+}
+
+body > header{
+    background-color: #0A6847;
+}
+body > header .nav-link:link, 
+body > header .nav-link:visited {
+    color: #ffffff;
+}
+body > header .nav-link:hover,
+body > header .nav-link:active {
+    color: #F6E9B2;
+}
+
+header .navbar-brand img{
+    max-height: 30px;
+    /* TODO: consider media query for larger breakpoint */
+}
+
+header .navbar-nav li:first-child a::after {
+    content: '|';
+    padding-left: 1em;
+    color: #ffffff !important;
+}
+/* if not important we have to rewrite all our selectors 
+header .navbar-nav li:first-child a:link::after
+header .navbar-nav li:first-child a:visited::after
+header .navbar-nav li:first-child a:hover::after
+header .navbar-nav li:first-child a:active::after{
+    color:
+} */
+
+/* PRIMARY BUTTON */
+.btn-secondary, .btn-secondary:link, .btn-secondary:visited{
+    background-color: #F3CA52;
+    color: #0A6847;
+}
+
+.btn-secondary:hover{
+    background-color: #eccf77;
+}
+
+.btn.btn-secondary:active{
+    background-color: #f1c339;
+    color: #0A6847;
+}
