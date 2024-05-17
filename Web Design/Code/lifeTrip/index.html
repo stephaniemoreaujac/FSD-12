@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LifeTrip</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+  <body class="home">
+    <!-- header -->
+    <header class="mb-2 mb-md-4">
+        <nav class="navbar navbar-expand-md">
+            <div class="container">
+              <a class="navbar-brand" href="index.html"><img src="images/lifetrip-logo.png" alt="LifeTrip"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-sm-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Destinations</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Packing List</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="btn btn-secondary px-4 fw-bold" href="#">Subscribe</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <!-- main content -->
+    <main>
+      <div class="container">
+        <div class="row">
+            <div class="col-12">
+              <img class="img-fluid" src="images/girl-in-mountains.png" >
+            </div>
+        </div>
+        <div class="row mt-3">
+          <div class="col-12 d-md-none">
+            <h2 class="text-center">Destinations</h2>
+          </div>
+          <div class="col-12 col-md-8 col-xxl-9">
+            <div class="slickSlider">
+              <div>
+                <img class="img-fluid" src="images/destination_forest.png">
+                <article>
+                  <h2>Walking in The Forest</h2>
+                <p>Summer 2024</p>
+              </article>
+              </div>
+              <div>
+                <img class="img-fluid" src="images/destination_yoga.png">
+                <article>
+                  <h2>Yogo near the lake</h2>
+                  <p>Spring 2024</p>
+                </article>
+              </div>
+              <div>
+                <img class="img-fluid" src="images/destination_hammock.png">
+                <article>
+                  <h2>Quietly Hammocking</h2>
+                  <p>Winter 2023</p>
+                </article>
+              </div>
+            </div>
+          </div>
+          <!-- next destination -->
+          <div class="col-12 col-md-4 col-xxl-3">
+            <h2 class="text-center">Next Destinations</h2>
+            <article class="nextDestination">
+              <h3>Location Name</h3>
+              <p>At assumenda explicabo laboriosam, debitis suscipit veniam pratibus incidunt et animi?</p>
+            </article>
+            <article class="nextDestination d-md-none d-lg-block">
+              <h3>Location Name</h3>
+              <p>Ratione, dolor. At assumenda expraesentium repudiandae deserunt unde hic provident dolores volupt</p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- footer -->
+    <footer class="py-2 mt-2 mt-md-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 col-md-2">
+                    <img src="images/profile.png" class="img-fluid circleImage">
+                </div>
+                <div class="col-9 col-md-7 col-lg-4 col-xxl-3">
+                    <h3 class="mb-0">Steph Moreau</h3>
+                    <p class="smallerText">Voluptates nihil eos ducimus maiores dolorum omnis harum in corporis optio recusandae provident, pariatur expedita deserunt quaerat. In, tempore incidunt?</p>
+                </div>
+                
+                <div class="col-12 footerSocialLegal">
+                    <div class="row">
+                        <div class="col-6 col-md-12 order-md-last text-md-end">
+                            <small>&copy;2024 All Rights Reserved</small>
+                        </div>
+                        <div class="col-6 text-end col-md-12">
+                                <a href="#"><i class="bi bi-facebook"></i></a>
+                                <a href="#"><i class="bi bi-instagram"></i></a>
+                                <a href="#"><i class="bi bi-youtube"></i></a>
+                            
+                        </div>
+                    </div>
+                </div>
+
+<!--                <div class="col-6 col-md-12 order-md-last text-md-end">
+                    <small>&copy;2024 All Rights Reserved</small>
+                </div>
+                <div class="col-6 text-end col-md-2 offset-md-1 offset-lg-4">
+                    <!-- TODO: fix vertical alignment at md+-- >
+                        <a href="#"><i class="bi bi-facebook"></i></a>
+                        <a href="#"><i class="bi bi-instagram"></i></a>
+                        <a href="#"><i class="bi bi-youtube"></i></a>
+                    
+                </div> -->
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js" integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+      $(document).ready(function(){
+        $('.slickSlider').slick({
+          slidesToShow: 3,
+          responsive: [
+            {
+              breakpoint: 1400,
+              settings: {
+                slidesToShow: 2,
+              }
+            },
+            {
+              breakpoint:768,
+              settings: {
+                slidesToShow: 1,
+              }
+            }
+          ]
+        });
+      });
+        
+    </script>
+  </body>
+</html>

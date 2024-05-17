@@ -4,9 +4,14 @@
 *{
     font-family: "Work Sans", Arial, Helvetica, sans-serif;
 }
+main{
+    color:#666;
+}
+
 h1, h2, h3, h4, h5, h6{
     font-family: "Sigmar One", Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-variant: small-caps;
+    color: #0A6847;
 }
 
 body > header, body > footer{
@@ -79,6 +84,50 @@ body > footer a:active{
     color: #F3CA52;;
 }
 
+.nextDestination h3{
+    font-family: "Work Sans", Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-variant:normal;
+    margin-bottom: 0;
+}
+.nextDestination p{
+    line-height: 1.2em;;
+}
+
+/* SLIDER */
+.slick-next:before, .slick-prev:before {
+    color: #F3CA52;
+}
+.slick-prev {
+    left: 15px;
+    z-index: 10;
+}
+.slick-next{
+    right: 15px;
+    z-index: 10;
+}
+
+.slickSlider div{
+    position: relative;
+}
+/* Add spacing between slides */
+.slickSlider { overflow: hidden;}
+.slick-slide { margin-left:27px; }
+.slick-list { margin-left:-27px; }
+
+@media (max-width:767px){
+    .slickSlider article{
+        background-color: rgba(10, 104, 71, .8);
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        color: #F6E9B2;
+    }
+    .slickSlider article h2{
+        color: #F6E9B2;
+    }
+    
+}
 /* MEDIA QUERIES */
 @media (min-width:768px) {
     .footerSocialLegal{
