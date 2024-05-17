@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Sigmar+One&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 *{
     font-family: "Work Sans", Arial, Helvetica, sans-serif;
@@ -8,7 +9,7 @@ h1, h2, h3, h4, h5, h6{
     font-variant: small-caps;
 }
 
-body > header{
+body > header, body > footer{
     background-color: #0A6847;
 }
 body > header .nav-link:link, 
@@ -51,4 +52,45 @@ header .navbar-nav li:first-child a:active::after{
 .btn.btn-secondary:active{
     background-color: #f1c339;
     color: #0A6847;
+}
+
+.circleImage{
+    border-radius: 50%
+}
+
+.smallerText{
+    font-size: .9em;
+    line-height: 1.2em;
+}
+
+body > footer{
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    color: #F6E9B2;
+}
+body > footer a:link,
+body > footer a:visited,
+body > footer h3{
+    color: #F6E9B2;
+}
+
+body > footer a:hover,
+body > footer a:active{
+    color: #F3CA52;;
+}
+
+/* MEDIA QUERIES */
+@media (min-width:768px) {
+    .footerSocialLegal{
+        margin-top:-35px;
+    }
+}
+/* MEDIA AND 
+@media (min-width:800px) and (max-height: 200px){
+    body >footer { background-color: red; }
+}
+*/
+
+@media print{
+    img{ display: none;}
 }
