@@ -47,6 +47,15 @@ header .navbar-nav li:first-child a:active::after{
     color:
 } */
 
+a:link, a:visited{
+    color: #F3CA52;
+    text-decoration: none;
+}
+a:hover, a:active, a:hover svg, a:active svg{
+    color: #0A6847;
+    text-decoration: underline #0A6847 ;
+}
+
 /* PRIMARY BUTTON */
 .btn-secondary, .btn-secondary:link, .btn-secondary:visited{
     background-color: #F3CA52;
