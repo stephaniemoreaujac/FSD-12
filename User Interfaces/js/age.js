@@ -2,6 +2,8 @@
     Day01 - We want to be able to calculate the possible age of a user.
 
     Day02 - convert into functions and validate year birth is a number
+
+    Day03 - remove hardcoded year
 */
 
 /**
@@ -10,7 +12,9 @@
  */
 function guessAge(yearBirth) {
     // 1
-    let yearCurrent = 2024;
+    let d = new Date();
+    // d.setFullYear(2000);
+    let yearCurrent = d.getFullYear();
 
     // 2
     // let yearBirth = 1900;
