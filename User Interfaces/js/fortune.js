@@ -1,6 +1,7 @@
 /*
 day1 - predict a user's fortune with hardcoded values
 day2 - convert to function and conditional number of kids
+day4 - add forced prompts and validate kids count 
 */
 /*
 // 1
@@ -40,4 +41,42 @@ function fortune(partner, job, geoLocation, dog, numKids=0){
     output += dog;
 
     console.log(output);
+}
+
+function promptFortune(){
+
+    let partner = validator("What is your partner's name?");
+    let job = validator("What do you do?");
+    let geo = validator("Where are you from?");
+    let pet = validator("What is your pets name?");
+    let kids = validator("How many kids?");
+    if (parseInt(kids) == kids )
+        kids = Math.abs(kids);
+    else kids = 0;
+
+    fortune(partner, job, geo, pet, kids);
+}
+
+function validator(question){
+    let answer;
+    
+    do {
+        answer = prompt( question );
+        if (checkValidation(answer))
+            alert("You have to provide an answer!");
+        // prompt user
+    }while (checkValidation(answer));
+/*
+    do {
+        if (answer !== undefined)
+            alert("You have to provide an answer!");
+
+        answer = prompt( question );
+    }while (answer == null || answer.trim() == "");
+    */
+    return answer;
+}
+
+function checkValidation(str){
+    return str == null || str.trim() == ""
 }
