@@ -1,0 +1,31 @@
+Use the provided function tooManyWords. This function requires a string to be passed as a parameter.
+Function description: Convert a given string into an acronym and output it.
+
+The function should perform the following:
+When the parameter passed function is an empty string or the data type is not a string, output the following "Cannot complete request" and nothing else happens
+
+Given a string, you must convert string to its acronym (An acronym is an abbreviations formed from the initial letters of words)
+• The generated acronym should be in uppercase
+• Assume that only spaces are the only character that will split words
+
+Output the acronym using the following format
+• "X stands for Y"
+  o X being the newly created acronym and Y being the phrase they submitted
+
+Example of successfully function calls
+	tooManyWords("Too Many Words");
+		//  TMW stands for Too Many Words
+	tooManyWords("OMG. It's Test Day");
+		//  OITD stands for OMG. It's Test Day
+	tooManyWords("It's not T-shirt season anymore");
+		//  INTSA stands for It's not T-shirt season anymore
+	tooManyWords("supercalifragilisticexpialidocious");
+		//  S stands for supercalifragilisticexpialidocious
+	tooManyWords("");
+		//  Cannot complete request
+
+
+
+function tooManyWords( slogan ){
+
+}
