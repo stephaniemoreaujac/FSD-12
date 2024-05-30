@@ -1,6 +1,8 @@
 Use the provided function tooManyWords. This function requires a string to be passed as a parameter.
 Function description: Convert a given string into an acronym and output it.
 
+When asked to output, call the printOut function and provide the expected value.
+
 The function should perform the following:
 When the parameter passed function is an empty string or the data type is not a string, output the following "Cannot complete request" and nothing else happens
 
@@ -28,4 +30,12 @@ Example of successfully function calls
 
 function tooManyWords( slogan ){
 
+}
+
+/**
+ * Output to the console the provided argument
+ * @param {*} x Item to oupput to the console
+ */
+function printOut( x ){
+	console.log( x );
 }
