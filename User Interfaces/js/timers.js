@@ -41,8 +41,67 @@ function completeUD(){
  */
 function completeDizzy(){
     console.log("STOP");
-    alert("I'm so dizzy");
+//    alert("I'm so dizzy");
+
     clearInterval(timerRL);
     clearInterval(timerUD);
+
+    clearInterval(timerBackground);
+    clearInterval(timerH1);
+    document.querySelector('body').innerHTML = "<h1>I'm so dizzy</h1>";
     clearTimeout(timerDizzy);
 }
+
+/*
+Create a new timer that will change the background of body every 2 seconds and alternate between black and red.
+Create a time that will alternate all the H1 text between black and orange every 2.5 seconds.
+Make sure that your colors will never be black at the same time.
+
+Instead of alerting "I'm so dizzy" to your user, change the html of body to show the following code : 
+	<h1>I'm so dizzy</h1>
+
+*/
+let timerBackground, timerH1;
+let countBackground=0, countH1=0;
+let colorBackground, colorH1;
+
+/**
+ * Setup intervals for DOM practice
+ */
+function styleTimer(){
+    timerBackground = setInterval(completeBackground, 2000);
+    timerH1 = setInterval(completeH1, 2500);
+    timerDizzy = setTimeout( completeDizzy, 10000);
+
+}
+
+/**
+ * Change body's background color
+ */
+function completeBackground(){
+    let item = document.getElementsByTagName('body')[0];
+
+    let newColor = (countBackground++%2) ? "black" : "red";
+    if (newColor != colorH1){
+        item.style.backgroundColor = newColor;
+        colorBackground = newColor;
+    }
+}
+
+/**
+ * Change H1's font color
+ */
+function completeH1(){
+    let items = document.querySelectorAll("h1");
+    let newColor = countH1++ % 2 ? "black" : "orange";
+    // if (newColor != colorBackground){
+    if (newColor != document.querySelector('body').style.backgroundColor){
+        colorH1 = newColor;
+        for (let i = 0; i<items.length; i++){
+            items[i].style.color = newColor;
+        }
+    }
+}
+
+
+styleTimer();
