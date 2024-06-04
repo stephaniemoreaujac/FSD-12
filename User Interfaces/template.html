@@ -6,6 +6,21 @@
   <title>Hello, world!</title>
   <meta name="viewport" content="width=device-width,initial-scale=1" >
   <meta name="description" content="" >
+  <style> 
+	a.homeLink { border: 1px solid red; }
+	input:invalid { border: 3px solid red; }
+	input:valid { border: 3px dashed green; }
+
+	input:invalid + span{
+		display: :inline;
+		color: red;
+		font-size: 10px;
+	}
+
+	input:valid + span{
+		display: none;
+	}
+</style>
 </head>
 <body>
   <header>
@@ -22,7 +37,7 @@
       <div class="menu-toggle__bar3"></div>
     </a>
   </nav>
-  <p>Magna in cupidatat sit ad ad laborums enim dolore veniams est reprehenderit cupidatat officia aute laboris aute nostrud non enim consectetur sint consequats in quis magna in esse id Ut <a href="#" id="home" class="homeLink">Duis eu</a> Excepteur irure officia sit deserunt ad proidents id ut proidents reprehenderit reprehenderit fugiat ad laborums consequats commodo eu ex ut enim laboris dolor ut esse cupidatat sit sed Lorem dolore in incididunt Excepteur culpa exercitation dolore ullamco deserunt voluptate ut amets in voluptate enim dolore sit sint do Excepteur aliquas ut nulla officia mollit do dolor Excepteur sed ad do ad sint aute deserunt ipsum cupidatat qui exercitation id nostrud ipsum enim non laborums quis fugiat <a href="#" class="homeLink">proidents ut tempor</a> velit irure in velit ut tempor dolore minim mollit elits minim magna mollit enim ut sed et aute qui ipsum sit do id ipsum qui irure proidents reprehenderit sed in tempor amets nulla ad minim dolor consequats enim Excepteur consectetur cupidatat enim sint aliquip esse minim eu quis commodo irure dolore cillum in ut in id dolor in consectetur sit ullamco aute reprehenderit consequats labore exercitation velit qui ut non est <a href="#" class="homeLink">laborums incididunt sint in mollit</a> aliquip consectetur veniams sed enim et nulla ad sunt labore tempor ea ipsum fugiat occaecat consectetur ea culpa cupidatat commodo ullamco nisi consequats quis consequats Duis occaecat consectetur veniams ad cupidatat veniams in aliquip non sunt amets aute culpa nisi amets nostrud consectetur <em class="homeLink">Ut dolor quis consequats aliquip voluptate sed</em> in cupidatat incididunt eu in ut cillum et in Excepteur incididunt sit proidents.</p>
+  <p>Magna in cupidatat sit ad ad laborums enim dolore veniams est reprehenderit cupidatat officia aute laboris aute nostrud non enim consectetur sint consequats in quis magna in esse id Ut <a href="http://google.ca" id="home" class="homeLink">Duis eu</a> Excepteur irure officia sit deserunt ad proidents id ut proidents reprehenderit reprehenderit fugiat ad laborums consequats commodo eu ex ut enim laboris dolor ut esse cupidatat sit sed Lorem dolore in incididunt Excepteur culpa exercitation dolore ullamco deserunt voluptate ut amets in voluptate enim dolore sit sint do Excepteur aliquas ut nulla officia mollit do dolor Excepteur sed ad do ad sint aute deserunt ipsum cupidatat qui exercitation id nostrud ipsum enim non laborums quis fugiat <a href="http://google.ca" class="homeLink">proidents ut tempor</a> velit irure in velit ut tempor dolore minim mollit elits minim magna mollit enim ut sed et aute qui ipsum sit do id ipsum qui irure proidents reprehenderit sed in tempor amets nulla ad minim dolor consequats enim Excepteur consectetur cupidatat enim sint aliquip esse minim eu quis commodo irure dolore cillum in ut in id dolor in consectetur sit ullamco aute reprehenderit consequats labore exercitation velit qui ut non est <a href="http://google.ca" class="homeLink">laborums incididunt sint in mollit</a> aliquip consectetur veniams sed enim et nulla ad sunt labore tempor ea ipsum fugiat occaecat consectetur ea culpa cupidatat commodo ullamco nisi consequats quis consequats Duis occaecat consectetur veniams ad cupidatat veniams in aliquip non sunt amets aute culpa nisi amets nostrud consectetur <em class="homeLink">Ut dolor quis consequats aliquip voluptate sed</em> in cupidatat incididunt eu in ut cillum et in Excepteur incididunt sit proidents.</p>
   <img src="https://picsum.photos/id/123/120/120" alt="" id="image1" >
 	<img src="https://picsum.photos/id/234/120/120" alt="" id="image2">
 	<img src="https://picsum.photos/id/345/120/120" alt="" id="image3" onMouseOver="mouseOverEvent()">
@@ -46,11 +61,13 @@
 		<h2>Form to fill out</h2>
 		<form action="#">
 			<label for="txtFirstName">First name:</label><br>
-			<input type="text" name="firstName" id="txtFirstName"><br>
+			<input type="text" name="firstName" id="txtFirstName" required>
+			<span><br>something wrong</span><br>
 			<label for="txtLastName">Last name:</label><br>
 			<input type="text" name="lastName" id="txtLastName"><br>
 			<label for="txtEmail">Email:</label><br>
-			<input type="email" name="email" id="txtEmail"><br>
+			<input type="email" name="email" id="txtEmail">
+			<span><br>something wrong</span><br>
 			<label for="txtMessage">Message:</label><br>
 			<textarea name="message" id="txtMessage"></textarea><br>
 			
@@ -62,6 +79,7 @@
 				<option value="banana">Banana</option>
 				<option value="cherry">Cherry</option>
 			</select><br>
+			<input type="checkbox" id="chkNews"> Get the news<br>
 			<input type="submit" value="Submit">
 		</form>
 	</section>
@@ -70,11 +88,10 @@
     <small id="copyright" class="awayLink">&copy;<script>document.write(new Date().getFullYear())</script> Your company name. All Rights Reserved.</small>
   </footer>
 	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="script/day06.js"></script>
+<script src="js/day07.js"></script>
 <script>
 // silence the console errors
-function mouseOverEvent(){}
-function doImageSwap(){}
+
 </script>
 </body>
 </html>
