@@ -20,11 +20,16 @@
 	input:valid + span{
 		display: none;
 	}
+	.txtBold{ font-weight: bold; }
+	.txtGreen { color: green; }
+	.txtBlue { color: blue; }
+	.borderThick{ border: 3px solid orange; }
+	.borderThin { border: 1px solid black; }
 </style>
 </head>
 <body>
   <header>
-    <h1>Hello, world!</h1>
+    <h1 class="txtGreen borderThick">Hello, world!</h1>
   </header>
   <nav class="nav" id="nav">
     <a href="#home">Logo</a>
@@ -62,7 +67,7 @@
 		<form action="#">
 			<label for="txtFirstName">First name:</label><br>
 			<input type="text" name="firstName" id="txtFirstName" required>
-			<span><br>something wrong</span><br>
+			<span><br>something wrong.</span><br>
 			<label for="txtLastName">Last name:</label><br>
 			<input type="text" name="lastName" id="txtLastName"><br>
 			<label for="txtEmail">Email:</label><br>
@@ -87,8 +92,8 @@
   <footer>
     <small id="copyright" class="awayLink">&copy;<script>document.write(new Date().getFullYear())</script> Your company name. All Rights Reserved.</small>
   </footer>
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="js/day07.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="js/day08.js"></script>
 <script>
 // silence the console errors
 

@@ -39,6 +39,34 @@
       </ul>
     </div>
     </div>
- 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script>
+      $(document).ready(function(){
+        // add outline to all boxes
+        $(".box").addClass("outlined");
+
+        // Toggles the color on and off for each box using CSS classes
+        $("#button_toggle_colors").on("click", function(){
+          $(".box").toggleClass("cardinal");
+        });
+
+        // Toggles the rounded-borders on and off for each box using CSS attributes
+        $("#button_toggle_roundedges").on("click", function(){
+          $(".box").toggleClass("round-edge");
+        });
+
+        // Adds one new box to the boxes
+        $("#button_add_box").on("click", function(){
+          console.log("add");
+          // <div id="box1" class="box"></div>
+          let boxCount = $(".box").length;
+          let newBox = $("<div></div>")
+              .addClass("box outlined")
+              .attr("id", "box"+ (boxCount+1))
+              .appendTo("#boxes");
+        });
+      });
+
+    </script>
   </body>
 </html>
