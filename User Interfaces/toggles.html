@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>jQuery Toggles</title>
+    <meta charset="UTF-8" >
+    <style> 
+			#container{ display: block} 
+			#boxes{ float: left; width: 100%} 
+			#toggles{ float: left; width: 100%; margin-top: 10px} 
+			#info{ float: left; margin-top: 5px;} 
+			.box{ width: 50px; height: 50px; float: left;} 
+			.outlined{ border: 1px solid; border-color: black;} 
+			.round-edge{ border-radius: 15px;} 
+			.cardinal{ background-color: #993333;}
+		</style>
+  </head>
+  <body>
+    
+    <div id="container">
+      <div id="boxes">
+        <div id="box1" class="box"></div>
+        <div id="box2" class="box"></div>
+        <div id="box3" class="box"></div>
+      </div>
+     
+    <div id="toggles">
+      <h2>Toggles</h2>
+      <button id="button_toggle_colors">Toggle Colors</button>
+      <button id="button_toggle_roundedges">Toggle Rounded Borders</button>
+      <button id="button_add_box">Add a New Box</button>
+    </div>
+
+    <div id="info">
+      <h2>Descriptions:</h2>
+      <ul>
+        <li><b>Toggle Colors</b>: Toggles the color on and off for each box using CSS classes.</li>
+        <li><b>Toggle Rounded Borders</b>: Toggles the rounded-borders on and off for each box using CSS attributes.</li>
+        <li><b>Add a New Box</b>: Adds one new box to the boxes.</li>
+      </ul>
+    </div>
+    </div>
+ 
+  </body>
+</html>
