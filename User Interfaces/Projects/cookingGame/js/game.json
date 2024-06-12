@@ -1,0 +1,111 @@
+{
+    "recipes": [
+        {
+            "name": "Tacos al Pastor",
+            "image": "tacos_al_pastor.jpg",
+            "ingredients": [
+                { "name": "Pork shoulder", "quantity": "500g" },
+                { "name": "Pineapple", "quantity": "1 cup" },
+                { "name": "Corn tortillas", "quantity": "12" },
+                { "name": "Onion", "quantity": "1" },
+                { "name": "Cilantro", "quantity": "1/2 cup" },
+                { "name": "Lime", "quantity": "1" },
+                { "name": "Ancho chili powder", "quantity": "2 tsp" }
+            ]
+        },
+        {
+            "name": "Chicken Enchiladas",
+            "image": "chicken_enchiladas.jpg",
+            "ingredients": [
+                { "name": "Chicken breasts", "quantity": "500g" },
+                { "name": "Flour tortillas", "quantity": "8" },
+                { "name": "Enchilada sauce", "quantity": "2 cups" },
+                { "name": "Cheddar cheese", "quantity": "1 cup" },
+                { "name": "Black olives", "quantity": "1/2 cup" },
+                { "name": "Green onions", "quantity": "1/4 cup" },
+                { "name": "Sour cream", "quantity": "1/2 cup" },
+                { "name": "Avocado", "quantity": "1/2" }
+            ]
+        },
+        {
+            "name": "Guacamole",
+            "image": "guacamole.jpg",
+            "ingredients": [
+                { "name": "Avocado", "quantity": "2" },
+                { "name": "Tomato", "quantity": "1" },
+                { "name": "Onion", "quantity": "1/2" },
+                { "name": "Lime", "quantity": "1" },
+                { "name": "Cilantro", "quantity": "1/4 cup" },
+                { "name": "Salt", "quantity": "to taste" },
+                { "name": "Garlic", "quantity": "1 clove" },
+                { "name": "Tortilla chips", "quantity": "1 cup" }
+            ]
+        },
+        {
+            "name": "Mole Poblano",
+            "image": "mole_poblano.jpg",
+            "ingredients": [
+                { "name": "Chicken breasts", "quantity": "500g" },
+                { "name": "Dried ancho chilies", "quantity": "4" },
+                { "name": "Dried guajillo chilies", "quantity": "2" },
+                { "name": "Almonds", "quantity": "1/2 cup" },
+                { "name": "Sesame seeds", "quantity": "2 tbsp" },
+                { "name": "Cinnamon", "quantity": "1 stick" },
+                { "name": "Chicken broth", "quantity": "2 cups" },
+                { "name": "Chocolate", "quantity": "50g" },
+                { "name": "Onion", "quantity": "1/2" }
+            ]
+        },
+        {
+            "name": "Chiles Rellenos",
+            "image": "chiles_rellenos.jpg",
+            "ingredients": [
+                { "name": "Poblano peppers", "quantity": "4" },
+                { "name": "Ground beef", "quantity": "500g" },
+                { "name": "Eggs", "quantity": "4" },
+                { "name": "Flour", "quantity": "1/2 cup" },
+                { "name": "Tomato sauce", "quantity": "1 cup" },
+                { "name": "Onion", "quantity": "1" },
+                { "name": "Garlic", "quantity": "2 cloves" },
+                { "name": "Cilantro", "quantity": "1/8 cup" }
+            ]
+        }
+    ],
+    "randomIngredients": [
+        { "name": "Corn", "quantity": "1 ear" },
+        { "name": "Bell pepper", "quantity": "1" },
+        { "name": "Jalapeno", "quantity": "1" },
+        { "name": "Cumin", "quantity": "1 tsp" },
+        { "name": "Olive oil", "quantity": "2 tbsp" },
+        { "name": "Parsley", "quantity": "1/4 cup" },
+        { "name": "Mustard", "quantity": "1/4 cup" },
+        { "name": "Black beans", "quantity": "1 can" },
+        { "name": "Potato", "quantity": "1" },
+        { "name": "Salsa", "quantity": "1/2 cup" },
+        { "name": "Chili powder", "quantity": "1 tbsp" },
+        { "name": "Cayenne pepper", "quantity": "1/2 tsp" },
+        { "name": "Sour cream", "quantity": "1/4 cup" },
+        { "name": "Fresh cheese", "quantity": "1/2 cup" },
+        { "name": "Cactus", "quantity": "1" },
+        { "name": "Rice", "quantity": "2 cups" },
+        { "name": "Red onion", "quantity": "1/2" },
+        { "name": "Paprika", "quantity": "1 tsp" },
+        { "name": "Carne asada", "quantity": "500g" },
+        { "name": "Lettuce", "quantity": "1 head" }
+    ],
+
+    "scoreTitles": [
+        { "range": "100", "title": "Master Chef" },
+        { "range": "90-99", "title": "Walter White" },
+        { "range": "80-89", "title": "Ratatouille" },
+        { "range": "70-79", "title": "Gordon Ramsay's Apprentice" },
+        { "range": "60-69", "title": "Patty Flipper SpongeBob" },
+        { "range": "50-59", "title": "Chef Boyardee" },
+        { "range": "40-49", "title": "Mr. Bean" },
+        { "range": "30-39", "title": "Swedish Chef" },
+        { "range": "20-29", "title": "Steamed Ham Skinner" },
+        { "range": "10-19", "title": "Bender Rodriguez" },
+        { "range": "0-9", "title": "Señor No-Bueno" }
+    ]
+}
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Memory Game</title>
+		<link rel="stylesheet" href="stylesheet.css">
+	</head>
+	<body>
+		<header>
+			<h1><a href="index.html">~== The Cooking Game ==~</a></h1>
+			<h2>Put your memory skills to the test!</h2>
+		</header>
+		<main>
+			<p><em>Here's what's on the menu today...</em></p>
+			<button class="menuButton" id="playButton">Play!</button>
+			<button class="menuButton" id="helpButton">How to Play</button>
+			<div class="modal" id="modalHelp">
+				<div class="modalContent">
+					<span class="modalClose">&times;</span>
+					<h3>Instructions</h3>
+					<p>When the play button is pressed, you will be presented with a recipe. You must try to memorize it to the best of your ability before the timer runs out.</p>
+					<p>Once no time remains, all ingredients will enter a word bank, and you must select those which were in the recipe.</p>
+					<p>When you press "Done" or the timer runs out, your answers will be corrected and scored.</p>
+				</div>
+			</div>
+			<div id="gameArea">
+				<div id="gameTop">
+					<div id="gameTopLeft">
+						<p><em>Tonight's special</em></p>
+						<h2 id="recipeTitle"></h2>
+						<img id="recipeImage" alt="Recipe Image">
+					</div>
+					<div id="gameTopRight">
+						<div id="timerArea">
+							<div id="timerHeader">TIME LEFT</div>
+							<div id="timer"></div>
+							<div id="scoreType"></div>
+						</div>
+						<div id="recipeInfo"></div>
+						<button class="menuButton" id="doneButton">Done</button>
+						<button class="menuButton" id="restartButton">Restart</button>
+					</div>
+				</div>
+				<hr id="bottom-divider">
+				<div id="ingredientButtons"></div>
+			</div>
+		</main>
+		<script src="js/main.js"></script>
+	</body>
+</html>

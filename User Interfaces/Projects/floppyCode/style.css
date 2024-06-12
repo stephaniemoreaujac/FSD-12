@@ -1,0 +1,126 @@
+body {
+	background-color: #f0f0f0;
+	font-family: Arial, sans-serif;
+	text-align: center;
+}
+#gameArea {
+	margin-top: 50px;
+	width: 360px;
+	border-radius: 10px;
+	height: 640px;
+	background-color: black;
+	/* background-image: url("./images/gray.png"); */
+	box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.755);
+}
+body {
+	height: 100%;
+	background-image: url("./images/matrix.webp");
+	/* background: linear-gradient(#000000, #000000, #000000, rgb(9, 255, 0), rgb(9, 255, 0)); */
+}
+
+#startScreen {
+	margin: auto;
+	margin-top: 20px;
+	position: relative;
+	width: 250px;
+	height: 300px;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(128, 128, 128, 0);
+	color: white;
+
+	font-family: "Courier New", Courier, monospace;
+	border: 8px solid;
+	border-radius: 10px;
+	box-shadow: 0 1px 32px white;
+	transform: rotate(0) scale(0);
+	animation: boom 1s linear;
+	animation-fill-mode: forwards;
+}
+
+#startScreen div {
+	height: 50%;
+}
+
+#startScreen h1 {
+	position: absolute;
+	width: 100%;
+	color: #222;
+	font-size: 36px;
+	text-shadow: 0 1px 2px;
+	animation: pulse 6s linear infinite;
+}
+
+#startScreen span {
+	position: relative;
+	font-size: 18px;
+	animation: up 2s linear infinite;
+	animation-delay: 3s;
+}
+
+h1 {
+	font-size: 24px;
+	padding: 20px;
+	color: rgb(255, 255, 255);
+}
+
+#title h1 {
+	margin-left: 30px;
+	font-size: 36px;
+	margin-bottom: 20px;
+	overflow: hidden;
+	white-space: nowrap;
+	margin: 0 auto;
+	letter-spacing: 10px;
+	animation: typing 3.5s steps(30) forwards, blink-caret 0.75s step-end infinite;
+}
+
+.container {
+	justify-content: center;
+	align-items: center;
+	color: white;
+	width: 100%;
+	font-family: "Courier New", Courier, monospace;
+}
+
+button {
+	background-color: #ffffff;
+	color: rgb(0, 0, 0);
+	border: none;
+	cursor: pointer;
+	width: 40%;
+	text-align: center;
+	justify-content: space-around;
+	padding: 10px;
+	margin: 1px;
+	border-radius: 10px;
+}
+
+button:hover {
+	background-color: #1a5a01;
+}
+button.selected {
+    background-color: #1a5a01;
+    color: #ffffff;
+}
+
+@keyframes up {
+	25% {
+		top: -4px;
+	}
+}
+/* The typing effect */
+@keyframes typing {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+/* The typewriter cursor effect */
+@keyframes boom {
+	100% {
+		transform: rotate(1080deg) scale(1);
+	}
+}
