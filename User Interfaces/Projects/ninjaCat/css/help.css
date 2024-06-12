@@ -1,0 +1,164 @@
+/*
+    Instruction (help) menu
+*/
+#helpInfo{    
+    display: none; /* Initially hidden */
+    width: 360px;
+    max-height: 365px; 
+    position: absolute;
+    top:70px; 
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5; 
+    background-color: lightgrey; 
+    font-family: 'Press Start 2P', sans-serif;
+    overflow-y: hidden;
+}
+
+#audioToggle{
+    position: absolute;
+    top: 10px;
+    left: 15px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#audioToggle span {
+    border-radius: 50%;
+    padding: 5px;
+}
+#audioToggle span:hover {
+    filter: brightness(0.9)
+}
+#audioOnIcon {
+    background-color: orange;
+}
+#audioOffIcon {
+    background-color: #9a9a9a;
+}
+.audioDisabled {
+    display: none;
+}
+
+#instruction {
+    max-height: 320px; 
+    overflow-y: scroll; /* Show vertical scrollbar */
+}
+
+#closeHelp {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    background-color: #5FCFD4;
+    color: #000000;
+    width: 30px;
+    height:30px;
+    border-radius: 50%;
+    padding-left: 7px;
+    font-family: 'Press Start 2P', sans-serif; 
+    font-size: 12px;
+}
+
+#helpTitle{     
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #ff6600;  
+    text-align: center;      
+    margin-top: 25px;
+}
+
+.instruction-row {      
+    margin-top: 10px;
+    font-size: 9px;
+    line-height: 2em;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.instruction-row .column {
+    padding: 5px;
+}
+.instruction-row .image-column {
+    width: 60px;
+}
+.instruction-row .text-column {
+    flex: 1;
+}
+.instruction-row img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Instruction scrollbar */
+.scrollIndicator {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top:-50px;
+}
+
+.scrollDown {
+    position: relative; 
+}
+
+.scrollDown span::before,
+.scrollDown span::after {
+    position: absolute;
+    content: '';
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-right: 2px solid #404040;
+    border-top: 2px solid #404040;
+    transform: translate(-50%, -50%) rotate(135deg);
+    left: 50%;
+    opacity: 0;
+    animation: ani 1.8s infinite linear;
+}
+
+.scrollDown span::after {
+    animation-delay: 0.8s; /* Delay the animation for the ::after pseudo-element */
+}
+
+@keyframes ani {
+    0% {
+        margin-top: 10px;
+        opacity: 0;
+    }
+
+    50% {
+        margin-top: 25px;
+        opacity: 1;
+    }
+
+    100% {
+        margin-top: 40px;
+        opacity: 0;
+    }
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #a0e6fa;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ff6344;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ff6344;
+}

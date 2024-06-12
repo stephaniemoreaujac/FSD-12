@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Ninja Cat Game - HTML5 Game</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Play the exciting HTML5 game where Ninja Cat catches chicken nuggets and other good items while avoiding water drops.">
+        <meta name="keywords" content="HTML5 game, Ninja Cat, chicken nuggets, water drops">
+        <meta name="author" content="Tamara Plante, Alexie Lagarde, Iana Setrakova">        
+        <link rel="icon" href="images/ninja-cat-fav.png" type="image/x-icon">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+        <link rel="stylesheet" href="css/intro.css">
+        <link rel="stylesheet" href="css/touch.css">
+        <link rel="stylesheet" href="css/help.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+
+        <div id="gameContainer"><!-- width: 360px -->
+            <div> <!-- game screen / height: 500px -->
+                <canvas id="game" width="360" height="500">
+                    Your browser does not support the HTML5 canvas tag.
+                </canvas>
+                <canvas id="playerCanvas" width="360" height="500">
+                    Your browser does not support the HTML5 canvas tag.
+                </canvas>
+                <div id="intro">
+                    <img id="bgItems" src="images/bg-intro-items.png" alt="background intro image">
+                    <img id="splash" src="images/bg-intro.svg" alt="background intro">
+                    <div id="container">
+                        <img id="logo" src="images/ninja-cat-logo.svg" alt="Logo intro">
+                    </div>
+        
+                    <div id="container1">
+                        <img id="cat" src="images/ninja-cat-anim.gif" alt="running ninja=cat">
+                    </div>
+                </div>
+
+                <div id="header">                
+                    <canvas id="guiCanvas" width="130" height="50"></canvas>
+                    <canvas id="livesCanvas" width="230" height="50"></canvas>
+                </div>
+            </div>
+
+            <div id="overlay">
+                <div id="chicken-anim"> <!-- Falling chicken nugger animation -->
+                    <img id="chicken-nugget" alt="chicken nugget falling animation" src="images/chicken-nugget.png">
+                    <div id="chicken-nuggets"></div>
+                </div>
+                <div id="gameOver">
+                    <img src="images/ninja-cat-logo.svg" alt="Logo">
+                    <h2>Game Over</h2>
+                    <p></p>
+                </div>
+            </div>
+            
+            
+            <div id="touchControl">
+                <div id="buttonLeft" class="touch"></div>
+                <div id="buttonRight" class="touch"></div>
+            </div>
+
+            <div id="menu">
+                <button id="pause" class="menuBtn" title="pause">
+                    <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                        <path fill-rule="evenodd" d="M8 5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H8Zm7 0a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-1Z" clip-rule="evenodd"/>
+                    </svg>                      
+                </button>
+                <button id="start" class="menuBtn">Start Game</button>
+                <button id="help" class="menuBtn">
+                    <span class="material-symbols-outlined">
+                        settings
+                    </span>
+                </button>
+            </div>
+
+        </div>
+
+        <canvas id="bgCanvas" width="700" height="600">
+            Your browser does not support the HTML5 canvas tag.
+        </canvas>
+
+        <div id="helpInfo">
+            <!-- audio switch -->
+            <div class="audio-toggle" id="audioToggle">
+                <span class="material-symbols-outlined" id="audioOnIcon">volume_up</span>
+                <span class="material-symbols-outlined audioDisabled" id="audioOffIcon">volume_off</span>
+            </div>
+            <p id="helpTitle">How to play</p>
+            <button id="closeHelp">x</button>
+            <div id="instruction"></div> <!-- Instructions added dynamically -->
+            <div id="scrollIndicator" class="scrollIndicator">
+                <div class="scrollDown">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game placeholder elements -->
+        <img id="player" src="images/ninja-cat-spritesheet.png" alt="ninja cat player">
+        <img id="items" src="images/items-spritesheet.png" alt="falling items">
+        <img id="water" src="images/water.png" alt="water drop item">
+
+        <img id="bgImg" src="images/japan-6.png" alt="game background">
+        <img id="heart" src="images/heart.png" alt="player lives">
+        
+        <script src="js/utils.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/game.js"></script>
+        <script src="js/interface.js"></script>
+        <script src="js/game_objects.js"></script>
+        <script src="js/player.js"></script>
+        <script src="js/game_items.js"></script>
+        <script src="js/intro.js"></script>
+        
+    </body>
+</html>

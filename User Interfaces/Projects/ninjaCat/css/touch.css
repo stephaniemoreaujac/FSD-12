@@ -1,0 +1,37 @@
+/*
+    Touch buttons
+*/
+#touchControl {
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    height: 75px;
+    width: 100%;
+}
+
+.touch {
+    background-image: url("../images/touch-btn.png");
+    position: absolute;
+    top: 10px;
+    width: 64px;
+    height: 64px;
+    z-index: 10;
+    visibility: hidden;
+    transform: scale(1.1) /* Make buttons slightly bigger */
+}
+
+#buttonLeft {
+    left: 10px;
+    background-position: -128px 0;
+}
+#buttonLeft.pressed {
+    background-position: -192px 0;
+}
+
+#buttonRight {
+    right: 10px;
+    background-position: 0 0;
+}
+#buttonRight.pressed {
+    background-position: -64px 0;
+}

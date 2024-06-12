@@ -1,0 +1,37 @@
+{
+    "gameWin": {
+        "src": "ninja-cat-fav.png",
+        "alt": "Game win",
+        "desc": "To win: Get the highest score before losing all your lives."
+    },
+    "arrows": {
+        "src": "arrow-set-2.png",
+        "alt": "Left and right arrows",
+        "desc": "Use the left and right arrow key to move the ninja cat left and right."
+    },
+    "chickenNugget": {
+        "src": "ninja-cat-nugget.png",
+        "alt": "Chicken Nugget",
+        "desc": "Catch the chicken nuggets to score 50 points and gain a speed up power."
+    },
+    "donut": {
+        "src": "donut.png",
+        "alt": "Donut",
+        "desc": "Catch the donuts to score 20 points, but each one slows you down (unless...)"
+    },
+    "fish": {
+        "src": "fish.png",
+        "alt": "Fish",
+        "desc": "Catch the fish to score 10 points."
+    },
+    "hotPepper": {
+        "src": "pepper.png",
+        "alt": "Hot pepper",
+        "desc": "Avoid the hot peppers, they make you lose 75 points and instantly freeze you."
+    },
+    "waterDrop": {
+        "src": "water-1.png",
+        "alt": "Water drop",
+        "desc": "Avoid the water drops, they cost a life. You have 9 lives."
+    }
+}

@@ -1,0 +1,123 @@
+body {
+    font-family: "Ubuntu", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+#instruction {
+    font-family: "Dosis", sans-serif;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#score-display {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-family: "Dosis", sans-serif;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 3em; 
+    color: #333;
+}
+
+#instruction h3 {
+    line-height: 1.5; 
+}
+
+.highlight {
+    color: #8370C1; 
+}
+
+#game-board {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(var(--grid-size), var(--square-size));
+    grid-template-rows: repeat(var(--grid-size), var(--square-size));
+}
+
+.square {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #333;
+    font-size: calc(var(--square-size) / 2.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.square:hover {
+    background-color: #e6e6e6;
+}
+
+.selected {
+    background-color: #ebd26d;
+}
+
+.cleared {
+    background-color: #ccc;
+    color: #ccc;
+}
+
+
+.container {
+    max-width: fit-content;
+    margin: 20px;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative; 
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 4em;
+    color: #333;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 4px;
+    font-family: "Ubuntu", sans-serif;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background-color: #9681DE; 
+    color: white;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+button:hover {
+    background-color: #8370C1; 
+    transform: scale(1.05);
+}
+
+#game-over-message {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    position: absolute; 
+    bottom: 150px; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    white-space: pre-line; 
+}

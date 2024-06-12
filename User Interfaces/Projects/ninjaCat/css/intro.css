@@ -1,0 +1,54 @@
+/* 
+    Intro.css
+*/
+#intro {
+    position: absolute;
+}
+
+#splash {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.47);
+}
+
+#bgItems {
+    image-rendering: pixelated;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#container {
+    width: 360px;
+    height: 180px;
+    position: relative;
+    top:-380px;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+#logo{
+    position: absolute;
+    top: 80px;
+    left:51%;
+    transform: translate(-50%, -50%);
+    
+}
+
+#container1{
+    width: 360px;
+    height: 60px;
+    position: relative;
+    bottom:200px;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+#cat{
+    position: absolute;
+    height:60px;
+    /*top: 20px;*/
+    left:90px;
+    transform: translate(-50%, -50%);
+    z-index:10;
+}

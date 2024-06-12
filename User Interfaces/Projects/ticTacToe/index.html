@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.11.1/dist/full.min.css" rel="stylesheet" type="text/css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+
+        }
+    </script>
+    <style>
+        .board {
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-gap: 5px;
+            margin: 50px auto;
+        }
+
+        .cell.disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        #message {
+            text-align: center;
+            font-size: 1.5em;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text-center text-xl">Tic-Tac-Toe Game</h1>
+    <div class="m-2 flex flex-row">
+        <div class="basis-3/5">
+            <div id="message"></div>
+            <div class="grid grid-cols-3 gap-1" id="board"></div>
+        </div>
+        <div class="basis-2/5 p-2">
+            <p>History</p>
+            <ul id="history"></ul>
+        </div>
+    </div>
+    <div>
+        <p>
+            Instructions: <span class="font-bold">Click</span> on an empty space to place your piece.
+            When you connect the dots, you <span class="font-bold">win</span>.
+        </p>
+    </div>
+    <script src="ttt.js"></script>
+</body>
+
+</html>
