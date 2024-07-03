@@ -1,0 +1,13 @@
+INSTALL MAMP
+- https://www.mamp.info/en/downloads/
+ - NOT REQUIRED apple bonjour
+ - NO MAMP Pro - trial is not long enough for the course
+ - REMEMBER your destination folder
+ - WINDOWS	- if no green dots, Preferences > Ports > MAMP default
+			- Preferences > PHP > Cache (OPCache)
+			- open Task Manager and kill any (apache, php or sql)
+
+- UPDATE php.ini to show all errors
+- optional: change location of your htdocs
+- You cannot use the live server plugin used in Web Design
+- Be sure you are running on http://localhost (port :8888 (or other) may or may not be present)
