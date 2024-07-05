@@ -1,7 +1,8 @@
 <footer>
 		<p>&copy; <?=date('Y'); ?> | <a href="#">Valid HTML</a> | <a href="#">Valid CSS</a></p>
 		<address>
-			Contact: <?php include "email.txt"; // because include/require does not have to be php file ?>
+			Contact: 
+			<a href="contact.php">Write to me</a> | <?php include "email.txt"; // because include/require does not have to be php file ?>
 		</address>
 	</footer>
 
