@@ -1,4 +1,11 @@
 <?php
+	require "includes/dbConnect.php";
+
+	// create php query
+	$query = $db->query( "SELECT * FROM portfolio WHERE public=1");
+	// setup the results
+	$results = $query->fetchAll();
+
 	$pageTitle = "Portfolio";
     //require because I want to make sure that it load the styles properly
     require "includes/header.php";
@@ -9,18 +16,21 @@
 		
 		<div id="main">
 			<h1>Portfolio</h1>
-			<article>
-				<h2>Dolores consequuntur</h2>
-				<p>Lorem ipsum dolor sit amet, nonumes voluptatum mel ea, cu case ceteros cum. Novum commodo malorum vix ut. Dolores consequuntur in ius, sale electram dissentiunt quo te. Cu duo omnes invidunt, eos eu mucius fabellas. Stet facilis ius te, quando voluptatibus eos in. Ad vix mundi alterum, integre urbanitas intellegam vix in.</p>
-			</article>
-			<article>
-				<h2>Accusamus facere explicabo</h2>
-				<p>Lorem ipsum dolor sit amet, nonumes voluptatum mel ea, cu case ceteros cum. Novum commodo malorum vix ut. Dolores consequuntur in ius, sale electram dissentiunt quo te. Cu duo omnes invidunt, eos eu mucius fabellas. Stet facilis ius te, quando voluptatibus eos in. Ad vix mundi alterum, integre urbanitas intellegam vix in.</p>
-			</article>
-			<article>
-				<h2>Murbanitas intellegam vix</h2>
-				<p>Lorem ipsum dolor sit amet, nonumes voluptatum mel ea, cu case ceteros cum. Novum commodo malorum vix ut. Dolores consequuntur in ius, sale electram dissentiunt quo te. Cu duo omnes invidunt, eos eu mucius fabellas. Stet facilis ius te, quando voluptatibus eos in. Ad vix mundi alterum, integre urbanitas intellegam vix in.</p>
-			</article>
+			<?php
+				// if $_GET['msg'] found then show them message
+				if (array_key_exists("msg", $_GET)){
+					echo "<p class='messages'>{$_GET['msg']}</p>";
+				}
+			?>
+
+			<?php foreach ($results as $item){ //loop and show each portfolio item ?>
+				<article>
+					<h2><?=$item['title']; ?></h2>
+					<p><?=$item['content']; ?></p>
+					<p><a href="portfolio_single.php?pid=<?=$item['id']; ?>">View</a>
+				</article>
+			<?php } ?>
+
 		</div>
 		<aside>
 			<?php

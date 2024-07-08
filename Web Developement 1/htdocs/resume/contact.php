@@ -135,7 +135,7 @@ require "includes/header.php";
   <?php } // end of !empty($error) ?>
     
   <article>
-    <!-- enctype required to submit "physical" data
+    <!-- enctype required to submit "physical" data -->
     <form action="" method="POST" enctype="multipart/form-data" class="col-6 offset-3 mt-3">
       
       <!-- First & Last Name-->
