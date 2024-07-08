@@ -117,3 +117,69 @@ body > section {
     color: #333;
 }
 
+
+
+form {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: #fcfcfc;
+    padding: 20px 50px 40px;
+    box-shadow: 1px 4px 10px 1px #aaa;
+    font-family: sans-serif;
+  }
+  
+  form * {
+      box-sizing: border-box;
+  }
+  
+  form h2{
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  form input {
+    margin-bottom: 15px;
+  }
+  
+  form input[type=text], form textarea {
+    display: block;
+    height: 32px;
+    padding: 6px 16px;
+    width: 100%;
+    border: none;
+    background-color: #f3f3f3;
+  }
+  form textarea {
+    height: 90px;
+  }  
+  form label, form span {
+    color: #777;
+    font-size: 0.8em;
+  }
+  
+  form input[type=checkbox] {
+    float: left;
+  }
+  
+  form input[type=submit] {
+    display: block;
+    margin: 20px auto 0;
+    width: 150px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    color: #000000;
+    font-weight: 700;
+    box-shadow: 1px 4px 10px 1px #aaa;
+    
+    background: #ffa53f; /* Old browsers */
+    background: -moz-linear-gradient(left, #ffa53f 0%, #ffd23f 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #e7ae1f 0%,#ffd23f 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ffa53f 0%,#ffd23f 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e7ae1f', endColorstr='#ffd23f',GradientType=1 ); /* IE6-9 */
+  }
+
+  form  .mb-3{
+    margin-bottom: 16px;
+  }
