@@ -3,6 +3,8 @@
 		<address>
 			Contact: 
 			<a href="contact.php">Write to me</a> | <?php include "email.txt"; // because include/require does not have to be php file ?>
+			<br><a href="portfolio_edit.php">Create Portfolio Item</a>
+			<!-- TODO: only allow authenticated users -->
 		</address>
 	</footer>
 

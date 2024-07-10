@@ -15,6 +15,9 @@ $dbConnection = "{$dbType}:host={$dbServer};dbname={$dbName};port={$dbPort}";
 // open the connection to the database
 $db = new PDO($dbConnection, $dbUser, $dbPass);
 
+// include the user-defined functions
+include_once "functions.php";
+
 /*
 // write SQL statements
 $sql = "SELECT * FROM users";

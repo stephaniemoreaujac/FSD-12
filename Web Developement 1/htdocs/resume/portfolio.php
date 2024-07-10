@@ -26,7 +26,7 @@
 			<?php foreach ($results as $item){ //loop and show each portfolio item ?>
 				<article>
 					<h2><?=$item['title']; ?></h2>
-					<p><?=$item['content']; ?></p>
+					<p><?=nl2br($item['content']); ?></p>
 					<p><a href="portfolio_single.php?pid=<?=$item['id']; ?>">View</a>
 				</article>
 			<?php } ?>
