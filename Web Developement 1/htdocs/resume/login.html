@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reseume</title>
+    <meta name="description" content="Dynamic Resume">
+    <link rel="stylesheet" href="styles/style.css">
+
+</head>
+
+<body>
+	<header>
+		<h1 id="logo"><img src="images/logo.png" alt="my logo">Steph Moreau</h1>
+		<nav>  
+			<ul>
+				<li><a href="#">Home</a>
+				<li><a href="#">Portfolio</a>
+				<li><a href="#">School</a>
+				<!-- <li><a href="#">Experience</a> -->
+			</ul>
+		</nav>
+		<p><strong>It is not a bug, it is an undocumented feature!</strong></p>
+	</header>
+	<main id="pageContent">
+		
+		<div id="main">
+			<h1>Login Page</h1>
+
+			<div class="row">
+				<form class="col-sm-6 col-sm-offset-3" action="login.php" method="post">
+					<p><?=$errorMessages; ?></p>
+					<div class="form-group">
+						<label for="txtLogin" class="control-label">Username</label>
+						<input id="txtLogin" name="txtLogin" type="text" required="required" class="form-control">
+					</div>
+
+					<div class="form-group">
+						<button name="btnSubtmi" type="submit" class="btn btn-primary">Submit</button>
+					</div>
+				</form>
+			
+			</div>
+			
+		</div>
+		<aside>
+			<div><img src="https://picsum.photos/300/150?1" alt="Random Photo 1"></div>
+			<div><img src="https://picsum.photos/300/150?2" alt="Random Photo 2"></div>
+			<div><img src="https://picsum.photos/300/150?3" alt="Random Photo 3"></div>
+		</aside>
+	</main>
+	<footer>
+		<p>&copy; 2024 | <a href="#">Valid HTML</a> | <a href="#">Valid CSS</a></p>
+		<address>
+			Contact: <a href="mailto:me@example.com">Mail me</a>
+		</address>
+	</footer>
+
+	<script src="js/script.js"></script>
+</body>
+
+</html><!-- SOURCE: https://html5-templates.com/ -->
