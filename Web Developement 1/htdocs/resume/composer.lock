@@ -1,0 +1,67 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "4f6c0bc544ec9499455b246f72af4c9c",
+    "packages": [
+        {
+            "name": "sergeytsalkov/meekrodb",
+            "version": "v3.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/SergeyTsalkov/meekrodb.git",
+                "reference": "7686313e1e2a9da8746d307c1e6ae3e2d83ce128"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/SergeyTsalkov/meekrodb/zipball/7686313e1e2a9da8746d307c1e6ae3e2d83ce128",
+                "reference": "7686313e1e2a9da8746d307c1e6ae3e2d83ce128",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "db.class.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Tsalkov",
+                    "email": "stsalkov@gmail.com"
+                }
+            ],
+            "description": "The Simple PHP/MySQL Library",
+            "homepage": "http://www.meekro.com",
+            "keywords": [
+                "database",
+                "mysql",
+                "mysqli",
+                "pdo"
+            ],
+            "support": {
+                "email": "support@meekro.com",
+                "issues": "https://github.com/SergeyTsalkov/meekrodb/issues",
+                "source": "https://github.com/SergeyTsalkov/meekrodb/tree/v3.0.1"
+            },
+            "time": "2024-06-27T23:29:31+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.6.0"
+}

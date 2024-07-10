@@ -1,6 +1,4 @@
 <?php 
-// TODO: fix  comments
-
 $pageTitle = "Modificatin Portfolio Item";
 
 require "includes/dbConnect.php";
@@ -23,9 +21,10 @@ if ( $_SERVER['REQUEST_METHOD'] == "GET"){
         $query = $db->prepare( "SELECT * FROM portfolio WHERE id = :pid" );
         $query->execute( [ "pid" => $_GET['pid'] ] );
 
-        $item = $query->fetch();
+        $item = $query->fetch(); // get info from database
+
         if ($item){
-            // data found in the database;
+            // data found in the database, populate variables
             $pid = $item['id'];
             $txtTitle = $item['title'];
             $txtDesc = $item['content'];
@@ -66,6 +65,7 @@ if ( $_SERVER['REQUEST_METHOD'] == "GET"){
     if (empty($errMessages)){
         // insert or update database
 
+        // populate common data for insert and update statements
         $data = [
             "title" => $txtTitle,
             "desc"  => $txtDesc,
