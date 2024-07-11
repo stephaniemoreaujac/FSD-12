@@ -1,6 +1,6 @@
 <?php 
  require "includes/dbConnect.php";
-loginRequired($isUserLoggedIn);
+ loginRequired( ($isUserLoggedIn || $isSessLoggedIn) );
 
     // check if the pid is in the query string
     if (!array_key_exists( "pid", $_GET)){

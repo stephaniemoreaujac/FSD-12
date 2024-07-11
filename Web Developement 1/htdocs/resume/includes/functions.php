@@ -1,7 +1,10 @@
 <?php 
+// in order to use session variables, we must always start a session
+session_start();
 
 // flag to know if user is logged in
 $isUserLoggedIn = (array_key_exists("resumeIsAuth", $_COOKIE) && $_COOKIE['resumeIsAuth'] == true);
+$isSessLoggedIn = (array_key_exists("sessIsAuth", $_SESSION) && $_SESSION['sessIsAuth'] == true);
 
 // user-defined functions
 

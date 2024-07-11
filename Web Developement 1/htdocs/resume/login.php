@@ -9,7 +9,9 @@ $password = "";
 
 require "includes/functions.php";
 
+// TODO: simplify into one statement
 loginRequired(!$isUserLoggedIn);
+loginRequired(!$isSessLoggedIn);
 
 // only validate a login on POST
 if ( $_SERVER['REQUEST_METHOD'] == "POST"){
@@ -42,11 +44,17 @@ if ( $_SERVER['REQUEST_METHOD'] == "POST"){
         
                // array_push($errMessages, "User {$user['first_name']} Exists");
 
+               /*
                // user is logged in - setup cookies
                $expiration = time() + (60 * 60 * 24); // expiration = 1 day
                setcookie('resumeIsAuth', true, $expiration);
                setcookie('resumeName', $user['first_name'], $expiration);
 // i do not have access to cookies here
+*/
+                // session variables
+                $_SESSION['sessIsAuth'] = true;
+                $_SESSION['sessName']   = $user['first_name'];
+
                header("Location: index.php");
                die();
 

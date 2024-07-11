@@ -3,7 +3,7 @@
 		<address>
 			Contact: 
 			<a href="contact.php">Write to me</a> | <?php include "email.txt"; // because include/require does not have to be php file ?>
-			<?php if ($isUserLoggedIn){ ?>
+			<?php if ($isUserLoggedIn || $isSessLoggedIn){ ?>
 				<br><a href="portfolio_edit.php">Create Portfolio Item</a> | 
 				<a href="logout.php">Logout</a>
 			<?php } else{ // not logged in ?>
