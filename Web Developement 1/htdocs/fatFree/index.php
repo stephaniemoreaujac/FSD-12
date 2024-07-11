@@ -6,27 +6,16 @@ require "vendor/autoload.php";
 
 $f3 = Base::instance(); // load the framework
 
+// framework to automatically load the classes within 
+$f3->set('AUTOLOAD', 'Controllers/');
+
 // set route
-$f3->route('GET /', function(){
-    echo "It's working!!!";
-});
+$f3->route('GET @home: /', 'Pages->homepage');
 
-$f3->route('GET /about', function(){
-    echo "about me!!";
-});
+$f3->route('GET @about: /about', 'Pages->about');
 
-$f3->route('GET /details/@singleId', function ($f3, $params){
-    echo "More details about " . $params['singleId'];
-    echo "<Br><Br>";
-    echo "Another way to grab data " . $f3->get('PARAMS.singleId');
-});
+$f3->route('GET @detailSingle: /details/@singleId', 'Pages->details1Arg');
 
-$f3->route('GET /details/@data/@other', function($f3, $params){
-    echo "We have {$params['data']} and we have {$params['other']}...";
-
-    if ($params['other'] == "stuff"){
-        echo "We got lots of stuff";
-    }
-});
+$f3->route('GET @detailDouble: /details/@data/@other', 'Pages->details2Arg');
 
 $f3->run();
