@@ -1,4 +1,8 @@
 <?php 
+
+// flag to know if user is logged in
+$isUserLoggedIn = (array_key_exists("resumeIsAuth", $_COOKIE) && $_COOKIE['resumeIsAuth'] == true);
+
 // user-defined functions
 
 /**
@@ -16,4 +20,16 @@ function validateIsEmptyText($key, $array){
         return false;
     }
 
+}
+
+/**
+ * Redirect the user if they are not logged in
+ * @param boolean $loginFlag
+ */
+function loginRequired($loginFlag){
+    // if the login is not true then redirect
+    if ($loginFlag != true){
+        header("Location: index.php");
+        die();
+    }
 }

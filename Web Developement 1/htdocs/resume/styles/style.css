@@ -142,7 +142,7 @@ form {
     margin-bottom: 15px;
   }
   
-  form input[type=text], form textarea {
+  form input[type=text], form input[type=password], form textarea {
     display: block;
     height: 32px;
     padding: 6px 16px;

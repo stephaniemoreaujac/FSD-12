@@ -3,9 +3,12 @@
 		<address>
 			Contact: 
 			<a href="contact.php">Write to me</a> | <?php include "email.txt"; // because include/require does not have to be php file ?>
-			<br><a href="portfolio_edit.php">Create Portfolio Item</a> | 
-			<a href="login.php">Login</a>
-			<!-- TODO: only allow authenticated users -->
+			<?php if ($isUserLoggedIn){ ?>
+				<br><a href="portfolio_edit.php">Create Portfolio Item</a> | 
+				<a href="logout.php">Logout</a>
+			<?php } else{ // not logged in ?>
+				<a href="login.php">Login</a>
+			<?php } ?>
 		</address>
 	</footer>
 

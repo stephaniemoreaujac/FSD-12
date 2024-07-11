@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php include_once "includes/functions.php"; ?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">

@@ -2,6 +2,7 @@
 $pageTitle = "Modificatin Portfolio Item";
 
 require "includes/dbConnect.php";
+loginRequired($isUserLoggedIn);
 
 // variables for script
 $errMessages = [];

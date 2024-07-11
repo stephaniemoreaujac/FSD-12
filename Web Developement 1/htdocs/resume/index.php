@@ -9,8 +9,11 @@
 		
 		<div id="main">
 			<article>
-				<h2>Welcome to my homepage</h2>
-                <p>The current time is <?=time(); ?>
+				<h1>Welcome to my homepage</h1>
+				<?php if ($isUserLoggedIn){ ?>
+					<h2>Hello <?=$_COOKIE['resumeName']; ?></h2>
+				<?php } ?>
+                <p>The current time is <?=time(); ?><p>
 				<p>Lorem ipsum dolor sit amet, nonumes voluptatum mel ea, cu case ceteros cum. Novum commodo malorum vix ut. Dolores consequuntur in ius, sale electram dissentiunt quo te. Cu duo omnes invidunt, eos eu mucius fabellas. Stet facilis ius te, quando voluptatibus eos in. Ad vix mundi alterum, integre urbanitas intellegam vix in.</p>
 			</article>
 		</div>

@@ -1,23 +1,27 @@
 <?php 
+// generate hashed password for our database
+// echo password_hash("123123", PASSWORD_DEFAULT); die();
+
 $pageTitle = "Login";
 $errMessages = [];
 $email = "";
+$password = "";
 
-/*
-Assignment 1 - 5%
-- implement the password form element
-- validate the elements are not empty
-- validate the passwords match (NOT IN A QUERY - in php)
-- only login.php needs to be submitted
- (if using function in other files, make sure the names make sense!!)
-*/
+require "includes/functions.php";
+
+loginRequired(!$isUserLoggedIn);
 
 // only validate a login on POST
 if ( $_SERVER['REQUEST_METHOD'] == "POST"){
-    // TODO: error checking - from values filled
-    
-    $email = $_POST['txtLogin'];
 
+    // username
+    if (validateIsEmptyText("txtLogin", $_POST)) array_push($errMessages, "Username can not be empty.");
+    else    $email = $_POST['txtLogin'];
+
+    // title
+    if (validateIsEmptyText("txtPw", $_POST)) array_push($errMessages, "Password can not be empty.");
+    else    $password = $_POST['txtPw'];
+    
     if (empty($errMessages)) {
     // no error
         require "includes/meekro.php"; 
@@ -28,11 +32,27 @@ if ( $_SERVER['REQUEST_METHOD'] == "POST"){
        
         if ($user == null){
             // no user = error
-            array_push($errMessages, "No user found");
+            array_push($errMessages, "No user found"); // not the best error message - should just say login failed - safety
         }else{
-            // passwords match = cookie
+            
             // no match = errors
-            array_push($errMessages, "User {$user['first_name']} Exists");
+            // if ($password == $user['pword']){ // would not work with hashed paswwrod
+            if ( password_verify($password, $user['pword']) ){
+                // passwords match = cookie
+        
+               // array_push($errMessages, "User {$user['first_name']} Exists");
+
+               // user is logged in - setup cookies
+               $expiration = time() + (60 * 60 * 24); // expiration = 1 day
+               setcookie('resumeIsAuth', true, $expiration);
+               setcookie('resumeName', $user['first_name'], $expiration);
+// i do not have access to cookies here
+               header("Location: index.php");
+               die();
+
+            }else
+                array_push($errMessages, "Invalid credentials");
+
         }
         
     }
@@ -47,13 +67,19 @@ require "includes/header.php";
 
 			<div class="row">
 				<form class="col-sm-6 col-sm-offset-3" action="login.php" method="post">
-                <?php if ( !empty($errMessages) ) { // TODO: make this a function ?>
-                    <p class="messages"><?=implode("<br>", $errMessages); ?></p>
-                <?php } ?>
+                    <?php if ( !empty($errMessages) ) { // TODO: make this a function ?>
+                        <p class="messages"><?=implode("<br>", $errMessages); ?></p>
+                    <?php } ?>
 
-					<div class="form-group">
+                    <div class="form-group">
 						<label for="txtLogin" class="control-label">Username</label>
-						<input id="txtLogin" name="txtLogin" type="text" required="required" class="form-control">
+						<input id="txtLogin" name="txtLogin" type="text" class="form-control" value="<?=$email; ?>">
+					</div>
+
+                    <div class="form-group">
+						<label for="txtPw" class="control-label">Password</label>
+						<input id="txtPw" name="txtPw" type="password" class="form-control">
+                        <!-- no value no else because we do not want to repopluate the password - safety -->
 					</div>
 
 					<div class="form-group">
