@@ -3,7 +3,7 @@
  * Controller class that handles all non-transactional pages 
  * (no database connection)
  */
-class Pages{
+class Pages extends Controller{
     /**
      *  GET Homepage 
      */
@@ -29,9 +29,11 @@ class Pages{
         echo "My controller about page";
         echo "<a href='{$home_route}'>Home</a>";
         */
-
+        // $f3->set('pageTitle', "About");
+        $this->setPageTitle("About");
+        
         $f3->set('aboutName', 'Steph');
-        echo Template::instance()->render('about.html');
+        echo Template::instance()->render('demo/about.html');
     }
 
     /**
@@ -43,8 +45,9 @@ class Pages{
         echo "<Br><Br>";
         echo "Another way to grab data " . $f3->get('PARAMS.singleId');
         */
+        $f3->set('pageTitle', "Single");
         $f3->set('single', $params['singleId']);
-        echo Template::instance()->render('single.html');
+        echo Template::instance()->render('demo/single.html');
     }
 
     /**
@@ -61,7 +64,7 @@ class Pages{
 
         $f3->set('first', $params['data']);
         $f3->set('second', $params['other']);
-        $f3->set('content', 'double.html');
-        echo Template::instance()->render("demo_main.html");
+        $f3->set('content', 'demo/double.html');
+        echo Template::instance()->render("demo/demo_main.html");
     }
 }
