@@ -1,0 +1,29 @@
+<include href="includes/header.html">
+
+    <main id="pageContent">
+		
+		<div id="main">
+			<h1>Portfolio</h1>
+			
+				<article>
+					<h2>{{ @item['title'] }}</h2>
+					<p>{{ @item['content'] | nl2br }}</p>
+					<p>
+                        <a href="{{@BASE}}{{ 'portfolioSingle', ['pid'=>@item['id']] | alias }}">View</a>
+                        <!-- TODO: Only if logged in -->
+                            | <a href="{{@BASE}}{{ 'portfolioEdit', ['pid'=>@item['id']] | alias }}">Edit</a> |
+                            <a href="{{@BASE}}{{ 'portfolioDelete', ['pid'=>@item['id']] | alias }}">Delete</a>
+                            <!-- we should confirm with the user before deleting -->
+                        <!-- end of TODO -->
+                    </p>
+				</article>
+			
+
+		</div>
+        <aside>
+            <repeat group="{{ [1,2,3] }}" value="{{ @key }}">
+                <div><img src="https://picsum.photos/300/150?{{@key}}" alt="Home Photo {{@key}}"></div>
+            </repeat>
+        </aside>
+
+<include href="includes/footer.html">

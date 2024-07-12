@@ -1,0 +1,45 @@
+<include href="includes/header.html">
+<div id="main">
+    <h1>Portfolio</h1>
+    
+    <check if="{{@errors}}">
+        <p class="messages">{{ "<br>", @errors | implode }}</p>
+    </check>
+
+    <form action="" method="POST" class="col-6 offset-3 mt-3">
+        
+        <!-- Title-->
+        <div class="input-group mb-3">
+          <label class="input-group-text" id="txtTitle">Portfolio Title</label>
+          <input type="text" class="form-control" id="txtTitle" name="title" value="{{ @item['title'] }}">
+        </div>
+        
+        <!-- Description -->
+        <div class="input-group mb-3">
+          <label class="input-group-text" for="txtDesc">Additional Comments</label>
+          <textarea class="form-control" name="content" id="txtDesc">{{ @item['content'] }}</textarea>
+        </div>
+        
+        <!-- public checkbox-->
+        <div class="input-group mb-3">
+          <div class="input-group-text">
+            {* confirm the status of PUBLIC. checked if key is present and value is 1 *}
+            <check if="{{ isset(@item['public']) && @item['public']==1}}">
+                <true><set chkPublic="checked"></true>
+                <false><set chkPublic=""></false>
+            </check>
+          <input class="form-check-input mt-0" type="checkbox" name="public" id="chkPublic" {{ @chkPublic }}>
+          </div>
+          <label class="form-control" for="chkPublic">Is this item public? </label>
+        </div>
+  
+        <input type="submit" class="btn btn-primary btn-lg mt-3">
+      </form>
+
+</div>
+<aside>
+    <repeat group="{{ [1,2,3] }}" value="{{ @key }}">
+        <div><img src="https://picsum.photos/300/150?{{@key}}" alt="Home Photo {{@key}}"></div>
+    </repeat>
+</aside>
+<include href="includes/footer.html">

@@ -8,15 +8,7 @@ class Pages extends Controller{
      *  GET Homepage 
      */
     function homepage($f3){
-        // route alias (nickname)
-        $about_route = $f3->get('BASE') . $f3->alias('about');
-        $single_route = $f3->get('BASE') . $f3->alias('detailSingle', ['singleId' => 'data']);
-        $double_route = $f3->get('BASE') . $f3->alias('detailDouble', 'data=1111,other=22222');
-
-        echo "This is my home page!!";
-        echo "<a href='{$about_route}'>About</a>";
-        echo "<a href='{$single_route}'>Deails Single</a>";
-        echo "<a href='{$double_route}'>Deails Double</a>";
+        echo Template::instance()->render('homepage.html');
     }
 
     /**

@@ -1,0 +1,16 @@
+<include href="includes/header.html">
+		
+    <div id="main">
+        <article>
+            <h1>Welcome to my homepage</h1>
+            <!-- Logged in user message -->
+            <p>The current time is {{ '{0, time}', @TIME | format }}<p>
+            <p>Lorem ipsum dolor sit amet, nonumes voluptatum mel ea, cu case ceteros cum. Novum commodo malorum vix ut. Dolores consequuntur in ius, sale electram dissentiunt quo te. Cu duo omnes invidunt, eos eu mucius fabellas. Stet facilis ius te, quando voluptatibus eos in. Ad vix mundi alterum, integre urbanitas intellegam vix in.</p>
+        </article>
+    </div>
+		<aside>
+            <repeat group="{{ [1,2,3] }}" value="{{ @key }}">
+			    <div><img src="https://picsum.photos/300/150?{{@key}}" alt="Home Photo {{@key}}"></div>
+            </repeat>
+    		</aside>
+<include href="includes/footer.html">

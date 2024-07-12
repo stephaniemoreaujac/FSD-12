@@ -1,0 +1,25 @@
+<include href="includes/header.html">
+
+<div id="main">
+    <h1>Portfolio</h1>
+    <check if="{{@errors}}"><!-- if error found then show them message -->
+        <p class='messages'>{{ @errors }}</p>
+    </check>
+
+    <repeat group="{{@results}}" value="{{@item}}">
+        <article>
+            <h2>{{ @item['title'] }}</h2>
+            <p>{{ @item['content'] | nl2br }}</p>
+            <p><a href="{{@BASE}}{{ 'portfolioSingle', ['pid'=>@item['id']] | alias }}">View</a>
+        </article>
+    </repeat>
+
+</div>
+<aside>
+    <repeat group="{{ [1,2,3] }}" value="{{ @key }}">
+        <div><img src="https://picsum.photos/300/150?{{@key}}" alt="Home Photo {{@key}}"></div>
+    </repeat>
+</aside>
+
+<include href="includes/footer.html">
+        
