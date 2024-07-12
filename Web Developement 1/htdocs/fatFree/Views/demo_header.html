@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About me</title>
+</head>
+<body>
+    <a href="{{ @BASE }}{{ 'about' | alias }}">About</a> | 
+    <a href="{{ @BASE }}{{ 'detailSingle', ['singleId'=>'222'] | alias }}">Single</a> |
+    <a href="{{ @BASE }}{{ 'detailDouble', ['data'=>'111', 'other'=>'AAA'] | alias }}">Double</a>
+    <hr>
+    <!-- end of header // start of body -->

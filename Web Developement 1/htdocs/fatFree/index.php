@@ -9,6 +9,9 @@ $f3 = Base::instance(); // load the framework
 // framework to automatically load the classes within 
 $f3->set('AUTOLOAD', 'Controllers/');
 
+// framework to automatically load the templates (VIEWS) within
+$f3->set("UI", "Views/");
+
 // set route
 $f3->route('GET @home: /', 'Pages->homepage');
 
