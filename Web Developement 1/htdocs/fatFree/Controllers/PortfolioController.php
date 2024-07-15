@@ -5,21 +5,24 @@
 
  class PortfolioController extends Controller{
 
+    private $model; // database object
+
+    public function __construct($f3){
+        // execute parent constructor
+        parent::__construct($f3);
+        
+        $this->model = new Portfolio(); // establish database connection    
+    }
+
     /**
      * Listing all the portfolio items
      */
     public function listing(){
-        // fetch real data
+        
+        // fetch only the public items
+        $items = $this->model->fetchPublic();
 
-        /* TODO: THIS IS DUMMY DATA TO BE REPLACE WHEN MODEL USED */
-        $dummy = [ ['id'=>1, 'content'=>'lorem ipsum 111', 'title'=>'item title 111'],
-            ['id'=>2, 'content'=>'lorem 
-            ipsum 
-            222', 'title'=>'item title 222'],
-            ['id'=>3, 'content'=>'lorem ipsum 333', 'title'=>'item title 333'],
-            ['id'=>4, 'content'=>'lorem ipsum 444', 'title'=>'item title 444'],
-        ];
-        $this->f3->set('results', $dummy);
+        $this->f3->set('results', $items);
         $this->setPageTitle("Portfolio Listing");
         echo $this->template->render("portfolio/listing.html");
     }
@@ -30,26 +33,31 @@
     public function single(){
 
         // fetch real db data
-        // redirect if does not exist
+        $item = $this->model->fetchById( $this->f3->get('PARAMS.pid') );
 
-        /* TODO: THIS IS DUMMY DATA TO BE REPLACE WHEN MODEL USED */
-        $dummy = ['id'=>$this->f3->get('PARAMS.pid'), 'content'=>'lorem ipsum 222', 'title'=>'item title 222'];
+        // redirect if does not exist or if private (and not logged in)
+        if (!$item || $item['public']!=1){
+            $this->f3->reroute('@portfolio');
+        }
 
-        $this->f3->set("item", $dummy);
-        $this->setPageTitle($dummy['title']);
+        // exists = setup the view variables
+        $this->f3->set("item", $item);
+        $this->setPageTitle($item['title']);
 
         echo $this->template->render("portfolio/single.html");
+        
     }
 
     /**
      * Delete a given item
      */
     public function delete(){
-        // Addtional validate should confirm the user wants to delete
+        // TODO: Addtional validate should confirm the user wants to delete
 
-        // check if it exists
+        // TODO: check if it exists and perform constraint
 
         // remove from database
+        $this->model->deleteById( $this->f3->get('PARAMS.pid') );
 
         // redirect user
         $this->f3->reroute('@portfolio');
@@ -61,10 +69,16 @@
      * Setup the form to update an existing item
      */
     public function edit(){
-        /* TODO: THIS IS DUMMY DATA TO BE REPLACE WHEN MODEL USED */
-        $dummy = ['id'=>$this->f3->get('PARAMS.pid'), 'content'=>'lorem ipsum 222', 'title'=>'item title 222', 'public'=>0];
-        $this->f3->set('item', $dummy);
+        // TODO: create method to not repeat ourselves
+        // fetch real db data
+        $item = $this->model->fetchById( $this->f3->get('PARAMS.pid') );
 
+        // redirect if does not exist
+        if (!$item){
+            $this->f3->reroute('@portfolio');
+        }
+        
+        $this->f3->set('item', $item);
         $this->setPageTitle("Edit Portfolio");
         echo $this->template->render("portfolio/form.html");
     }
@@ -74,8 +88,12 @@
      */
     public function editSave(){
         if ($this->isFormValid()){
+            // check that item id exists
+unset($_POST['content']);
             // save and reroute
-            echo "Saving existing data... maybe";
+            $itemId = $this->f3->get("PARAMS.pid");
+            $this->model->updateById( $itemId );
+            $this->f3->reroute("@portfolioSingle(@pid={$itemId})");
         }
     }
 
@@ -96,7 +114,8 @@
     public function addSave(){
         if ($this->isFormValid()){
             // save and reroute
-            echo "Saving new data... maybe";
+            $itemId = $this->model->addItem();
+            $this->f3->reroute("@portfolioSingle(@pid={$itemId})");
         }
     }
 

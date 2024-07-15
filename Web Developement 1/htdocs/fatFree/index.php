@@ -7,7 +7,7 @@ require "vendor/autoload.php";
 $f3 = Base::instance(); // load the framework
 
 // framework to automatically load the classes within 
-$f3->set('AUTOLOAD', 'Controllers/');
+$f3->set('AUTOLOAD', 'Controllers/|Models/');
 
 // framework to automatically load the templates (VIEWS) within
 $f3->set("UI", "Views/");
