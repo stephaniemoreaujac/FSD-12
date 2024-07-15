@@ -6,23 +6,17 @@ require "vendor/autoload.php";
 
 $f3 = Base::instance(); // load the framework
 
-// framework to automatically load the classes within 
-$f3->set('AUTOLOAD', 'Controllers/|Models/');
+// CONFIGURATION FILE
+$f3->config('config.ini');
+$f3->config('access.ini'); // sensitive data
 
-// framework to automatically load the templates (VIEWS) within
-$f3->set("UI", "Views/");
-
-// debugging
-$f3->set("DEBUG", 1);
 
 // set route
 $f3->route('GET @home: /', 'Pages->homepage');
-
-$f3->route('GET @about: /about', 'Pages->about');
-
-$f3->route('GET @detailSingle: /details/@singleId', 'Pages->details1Arg');
-
-$f3->route('GET @detailDouble: /details/@data/@other', 'Pages->details2Arg');
+// MOVED to config.ini
+// $f3->route('GET @about: /about', 'Pages->about');
+// $f3->route('GET @detailSingle: /details/@singleId', 'Pages->details1Arg');
+// $f3->route('GET @detailDouble: /details/@data/@other', 'Pages->details2Arg');
 
 // PORTOFOLIO CRUD
 $f3->route("GET @portfolio: /portfolio", 'PortfolioController->listing');

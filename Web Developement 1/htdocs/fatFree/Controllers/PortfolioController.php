@@ -89,7 +89,7 @@
     public function editSave(){
         if ($this->isFormValid()){
             // check that item id exists
-unset($_POST['content']);
+
             // save and reroute
             $itemId = $this->f3->get("PARAMS.pid");
             $this->model->updateById( $itemId );

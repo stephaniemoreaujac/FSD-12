@@ -10,12 +10,11 @@ class Controller{
      * Parent constructor setup common elements and value
      * @param object $f3 Instance of the FatFreeFramework
      */
-    function __construct($f3)
-    {
+    function __construct($f3) {
         $this->f3 = $f3; // f3 instance to be used
         
         // setup of page title
-        $f3->set('pageTitle', 'StephMoreau');
+        $f3->set('pageTitle', $f3->get('SITENAME'));
         // setup errors variables used on several pages
         $f3->set("errors", null);
 
