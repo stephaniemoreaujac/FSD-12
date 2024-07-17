@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# /portfolio/2/edit -> portfolio_edit.php?id=2
+RewriteRule portfolio/([0-9]+)/edit portfolio_edit.php?pid=$1 [L]
+
+# /portfolio/2 -> portfolio_single.php?id=2
+RewriteRule portfolio/([0-9]+) portfolio_single.php?pid=$1 [L]
+
+RewriteRule portfolio/ portfolio.php

@@ -27,7 +27,7 @@
 				<article>
 					<h2><?=$item['title']; ?></h2>
 					<p><?=nl2br($item['content']); ?></p>
-					<p><a href="portfolio_single.php?pid=<?=$item['id']; ?>">View</a>
+					<p><a href="portfolio/<?=$item['id']; ?>">View</a>
 				</article>
 			<?php } ?>
 

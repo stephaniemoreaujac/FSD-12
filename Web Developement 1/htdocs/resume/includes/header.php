@@ -12,6 +12,7 @@
         }
         echo "StephMoreau";
     ?></title>
+    <base href="http://localhost/resume/">
     <meta name="description" content="Dynamic Resume">
     <link rel="stylesheet" href="styles/style.css">
 </head>

@@ -38,7 +38,7 @@
 					<p>
                         <a href="portfolio_single.php?pid=<?=$item['id']; ?>">View</a>
                         <?php if ($isUserLoggedIn || $isSessLoggedIn){ ?>
-                            | <a href="portfolio_edit.php?pid=<?=$item['id']; ?>">Edit</a> |
+                            | <a href="portfolio/<?=$item['id']; ?>/edit">Edit</a> |
                             <a href="portfolio_delete.php?pid=<?=$item['id']; ?>">Delete</a>
                             <!-- we should confirm with the user before deleting -->
                         <?php } ?>
