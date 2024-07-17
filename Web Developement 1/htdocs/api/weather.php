@@ -17,6 +17,9 @@ $ch = curl_init( $endPoint );
 
 // configure our request - POST DATA, HEADER, Return method
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true ); // return as a string instead of output
+// ** issues with the SSL certificates
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
 
 // send the request
 $results = curl_exec( $ch ); // resutls will contain a string

@@ -17,6 +17,10 @@ $ch = curl_init( $endPoint );
 // configure curl
 curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
 
+// ** issues with the SSL certificates
+curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, FALSE);
+curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+
 // execute curl
 $resp = curl_exec( $ch );
 
